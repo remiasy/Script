@@ -108,13 +108,8 @@ function Maru()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
 end
 
-function checkonline()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/remiasy/Script/main/checkonline.lua"))()
-end
-function newcheckonline()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/remiasy/Script/main/newcheckonline.lua"))()
-end
 function hermanos()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/remiasy/Script/main/checkonline.lua"))()
 	if _G.PC ~= nil then
     repeat task.wait() until game:IsLoaded()
     getgenv().Hermanos_Settings = {
@@ -130,8 +125,6 @@ end
 end
 Maru()
 hermanos()
-checkonline()
-newcheckonline()
 spawn(function()
 	while true do
 		local args = {
