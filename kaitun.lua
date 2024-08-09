@@ -109,9 +109,11 @@ function Maru()
 end
 
 function checkonline()
-	loadstring(game:HttpGet("https://pastebin.com/raw/S6FzuqNb"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/remiasy/Script/main/checkonline.lua"))()
 end
-
+function newcheckonline()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/remiasy/Script/main/newcheckonline.lua"))()
+end
 function hermanos()
 	if _G.PC ~= nil then
     repeat task.wait() until game:IsLoaded()
@@ -129,6 +131,7 @@ end
 Maru()
 hermanos()
 checkonline()
+newcheckonline()
 spawn(function()
 	while true do
 		local args = {
