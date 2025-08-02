@@ -1,4 +1,4 @@
-setfpscap(4)
+setfpscap(3)
 getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = false,
 
@@ -283,7 +283,7 @@ getgenv().ConfigsKaitun = {
 		UrlPet =
 		"https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
 		UrlSeed =
-		"https://discord.com/api/webhooks/1399733186409402489/rzYhVpEjPcIM7RHOgf4z6yi76TLX_eFhDVqUvMeqmcJADtq2EV__M4QQOnyuupPEANFQ",
+		"https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
 		PcName = "PCALL",
 
 		Noti = {
@@ -300,17 +300,17 @@ getgenv().ConfigsKaitun = {
 			},
 			Pets = {
 				"Kitsune",
-				-- "Corrupted Kitsune",
-				-- "Dragonfly",
-				-- "Night Owl",
-				-- "Queen Bee",
-				-- "Raccoon",
+				"Corrupted Kitsune",
+				"Dragonfly",
+				"Night Owl",
+				"Queen Bee",
+				"Raccoon",
 				-- "Disco Bee",
 				-- "Fennec Fox",
 				-- "Disco Bee",
 				-- "Butterfly",
-				--"Mimic Octopus",
-				--"Red Fox",
+				"Mimic Octopus",
+				"Red Fox",
 			},
 			Pet_Weight_Noti = true,
 		}
