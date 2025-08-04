@@ -279,12 +279,12 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 
-	Webhook = {
-		UrlPet =
-		"https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
-		UrlSeed =
-		"https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
-		PcName = "PCALL",
+    Webhook = {
+        UrlPet =
+        "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
+        UrlSeed =
+        "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
+        PcName = "PCALL",
 
 		Noti = {
 			Seeds = {
@@ -300,17 +300,19 @@ getgenv().ConfigsKaitun = {
 			},
 			Pets = {
 				"Kitsune",
-				"Corrupted Kitsune",
-				"Dragonfly",
-				"Night Owl",
-				"Queen Bee",
-				"Raccoon",
+							"French Fry Ferret",
+
+				-- "Corrupted Kitsune",
+				-- "Dragonfly",
+				-- "Night Owl",
+				-- "Queen Bee",
+				-- "Raccoon",
 				-- "Disco Bee",
 				-- "Fennec Fox",
 				-- "Disco Bee",
 				-- "Butterfly",
-				"Mimic Octopus",
-				"Red Fox",
+				--"Mimic Octopus",
+				--"Red Fox",
 			},
 			Pet_Weight_Noti = true,
 		}
