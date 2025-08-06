@@ -1,6 +1,6 @@
 --setfpscap(3)
 getgenv().ConfigsKaitun = {
-	Beta_Fix_Data_Sync = true,
+	Beta_Fix_Data_Sync = false,
 
 	["Block Pet Gift"] = false,
 
