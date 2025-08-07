@@ -1,8 +1,8 @@
 --setfpscap(3)
 getgenv().ConfigsKaitun = {
-	Beta_Fix_Data_Sync = false,
+	Beta_Fix_Data_Sync = true,
 
-	["Block Pet Gift"] = false,
+	["Block Pet Gift"] = true,
 
 	Collect_Cooldown = 60,      -- cooldown to collect fruit
 	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation)
@@ -62,7 +62,7 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		["Cook Event"] = {
-			Minimum_Money = 30_000_000, -- minimum money to start play this event
+			Minimum_Money = 30000000, -- minimum money to start play this event
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -83,7 +83,7 @@ getgenv().ConfigsKaitun = {
 			--"Sakura Bush",
 			--"Raiju",
 		},
-		Start_Do_Honey = 2_000_000             -- start trade fruit for honey at money
+		Start_Do_Honey = 2000000             -- start trade fruit for honey at money
 	},
 	Gear = {
 		Buy = {
