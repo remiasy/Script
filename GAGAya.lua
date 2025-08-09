@@ -1,28 +1,23 @@
---setfpscap(3)
 getgenv().ConfigsKaitun = {
 	Beta_Fix_Data_Sync = true,
 
-	["Block Pet Gift"] = false,
+	NoDeletePlayer = false,
 
-	Collect_Cooldown = 60,      -- cooldown to collect fruit
-	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation)
+	["Block Pet Gift"] = true,
+
+	Collect_Cooldown = 120, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = true,
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 300,
-		["Destroy Untill"] = 280,
+		["Limit"] = 200,
+		["Destroy Until"] = 280,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
-			"Bone Blossom",
-			"Moon Melon",
-			"Maple Apple",
 			"Fossilight",
-			"Tranquil Bloom",
-			"Grand Tomato",
 		}
 	},
 
@@ -48,8 +43,6 @@ getgenv().ConfigsKaitun = {
 				"Moon Mango",
 				"Bone Blossom",
 				"Fossilight",
-				"Tranquil Bloom",
-				"Grand Tomato",
 			}
 		}
 	},
@@ -62,38 +55,44 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		["Cook Event"] = {
-			Minimum_Money = 30000000, -- minimum money to start play this event
+			Minimum_Money = 30_000_000,          -- minimum money to start play this event
+			Rewards_Item = {   -- The top is the most top mean prefered.
+				"Gorilla Chef",
+				"Gourmet Egg",
+				"Culinarian Chest",
+				"Gourmet Seed Pack",
+			}
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
 		},
 		Craft = {
-			"Ancient Seed Pack",
 			"Anti Bee Egg",
-			"Primal Egg",
 		},
 		Shop = {
 			"Zen Egg",
-			--"Zen Seed Pack",
-			--"Spiked Mango",
-			--"Pet Shard Tranquil",
-			--"Pet Shard Corrupted",
-			--"Koi",
-			--"Soft Sunshine",
-			--"Sakura Bush",
-			--"Raiju",
+			"Zen Seed Pack",
+			"Spiked Mango",
+			"Pet Shard Tranquil",
+			"Pet Shard Corrupted",
+			"Koi",
+			"Soft Sunshine",
+			"Sakura Bush",
+			"Raiju",
 		},
-		Start_Do_Honey = 2000000             -- start trade fruit for honey at money
+		Start_Do_Honey = 2_000_000             -- start trade fruit for honey at money
 	},
+
 	Gear = {
 		Buy = {
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
-			"Medium Toy",
+			"Basic Sprinkler",
+			"Lightning Rod",
+			"Level Up Lollipop",
 			"Medium Treat",
-			"Levelup Lollipop",
-			"Tanning Mirror"
+			"Medium Toy",
 		},
 		Lock = {
 			"Master Sprinkler",
@@ -109,41 +108,49 @@ getgenv().ConfigsKaitun = {
 			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
-			"Night Egg",
-			"Bug Egg",
-			"Anti Bee Egg",
 			"Dinosaur Egg",
 			"Oasis Egg",
+			"Anti Bee Egg",
+			"Night Egg",
+			"Bug Egg",
 			"Paradise Egg",
-			"Common Summer Egg", },
+			"Bee Egg",
+			"Rare Summer Egg",
+			"Mythical Egg",
+			"Common Egg",
+		},
 		Buy = {
-			"Zen Egg",
-			"Primal Egg",
-			"Night Egg",
-			"Bug Egg",
-			"Anti Bee Egg",
-			"Dinosaur Egg",
+			"Bee Egg",
 			"Oasis Egg",
 			"Paradise Egg",
-			"Common Summer Egg",
+			"Anti Bee Egg",
+			"Night Egg",
+			"Rare Summer Egg",
+			"Bug Egg",
+			"Mythical Egg",
+			"Common Egg",
 		}
 	},
+
 	Pets = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 8, 75, 1 },
 			},
-			["Limit Upgrade"] = 5,
+			["Limit Upgrade"] = 2,      -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Tarantula Hawk"] = { 2, 101, 1 },
-				["Blood Kiwi"] = { 4, 101, 2 },
-				["Rooster"] = { 2, 101, 3 },
-				["Starfish"] = { 8, 75, 4 },
+				["Gorilla Chef"] = { 3, 75, 1 },
+				-- ["Tanchozuru"] = { 5, 100, 1 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible
+				["Ostrich"] = { 3, 75, 2 },
+				["Blood Kiwi"] = { 8, 75 },
+				["Seal"] = { 8, 75 },
+				["Rooster"] = { 8, 75 },
+				["Starfish"] = { 5, 75 },
 			},
 		},
 		Favorite_LockedPet = true,
-		Locked_Pet_Age = 50, -- pet that age > 60 will lock
+		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"French Fry Ferret",
 			"Spaghetti Sloth",
