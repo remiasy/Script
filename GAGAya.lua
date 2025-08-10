@@ -12,20 +12,40 @@ getgenv().ConfigsKaitun = {
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 200,
-		["Destroy Until"] = 280,
+		["Limit"] = 250,
+		["Destroy Untill"] = 200,
 
 		["Safe Tree"] = {
-			"Moon Blossom",
+			"Tranquil Bloom",
+			"Maple Apple",
+			"Moon Mango",
+			"Bone Blossom",
 			"Fossilight",
+      		"Serenity",
+
 		}
 	},
 
 	Seed = {
 		Buy = {
-			Mode = "Auto", -- Custom , Auto
-			Custom = { -- any fruit u need to place
-				"Carrot",
+			Mode = "Custom", -- Custom , Auto
+			Custom = {
+				"Tomato",
+				"Strawberry",
+				"Bell Pepper",
+				"Blood Banana",
+				"Onion",
+				"Pear",
+				"Grape",
+				"Mushroom",
+				"Pepper",
+				"Cacao",
+				"Beanstalk",
+				"Ember Lily",
+				"Sugar Apple",
+				"Burning Bud",
+				"Giant Pinecone",
+				"Elder Strawberry",
 			}
 		},
 		Place = {
@@ -34,14 +54,11 @@ getgenv().ConfigsKaitun = {
 				"Carrot"
 			},
 			Lock = {
-				"Maple Apple",
 				"Sunflower",
 				"Dragon Pepper",
 				"Elephant Ears",
 				"Moon Melon",
-				"Easter Egg",
 				"Moon Mango",
-				"Bone Blossom",
 				"Fossilight",
 			}
 		}
@@ -55,12 +72,14 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		["Cook Event"] = {
-			Minimum_Money = 30_000_000,          -- minimum money to start play this event
-			Rewards_Item = {   -- The top is the most top mean prefered.
+			Minimum_Money = 30_000_000, -- minimum money to start play this event
+			Rewards_Item = { -- The top is the most top mean prefered.
 				"Gorilla Chef",
 				"Gourmet Egg",
 				"Culinarian Chest",
 				"Gourmet Seed Pack",
+				"Sunny-Side Chicken",
+				-- u can add it more as u want, if it not in list.
 			}
 		},
 		["Traveling Shop"] = {
@@ -80,11 +99,11 @@ getgenv().ConfigsKaitun = {
 			"Sakura Bush",
 			"Raiju",
 		},
-		Start_Do_Honey = 2_000_000             -- start trade fruit for honey at money
+		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
 
 	Gear = {
-		Buy = {
+		Buy = { 
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
@@ -117,7 +136,7 @@ getgenv().ConfigsKaitun = {
 			"Bee Egg",
 			"Rare Summer Egg",
 			"Mythical Egg",
-			"Common Egg",
+			"Common Summer Egg",
 		},
 		Buy = {
 			"Bee Egg",
@@ -128,25 +147,27 @@ getgenv().ConfigsKaitun = {
 			"Rare Summer Egg",
 			"Bug Egg",
 			"Mythical Egg",
+			"Common Summer Egg",
 			"Common Egg",
 		}
 	},
 
 	Pets = {
-		["Start Delete Pet At"] = 40,
+		["Start Delete Pet At"] = 45,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Starfish"] = { 8, 75, 1 },
+				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 2,      -- max is 5 (more than or lower than 1 will do nothing)
+			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Gorilla Chef"] = { 3, 75, 1 },
-				-- ["Tanchozuru"] = { 5, 100, 1 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible
-				["Ostrich"] = { 3, 75, 2 },
-				["Blood Kiwi"] = { 8, 75 },
-				["Seal"] = { 8, 75 },
-				["Rooster"] = { 8, 75 },
+				["Tanchozuru"] = { 5, 100, 1 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
+				["Ostrich"] = { 3, 100, 2 },
+				["Blood Kiwi"] = { 8, 100 },
+				["Seal"] = { 8, 100 },
+				["Rooster"] = { 8, 100 },
 				["Starfish"] = { 5, 75 },
+				["Spaghetti Sloth"] = { 4, 100 },
+				["Koi"] = { 2, 100 },
 			},
 		},
 		Favorite_LockedPet = true,
@@ -155,61 +176,62 @@ getgenv().ConfigsKaitun = {
 			"French Fry Ferret",
 			"Spaghetti Sloth",
 			"Corrupted Kitsune",
+			"Raiju",
+			"Koi",
+			"Tanuki",
+			"Tanchozuru",
+			"Kappa",
 			"Kitsune",
+			"Dilophosaurus",
+			"Moon Cat",
+			"Capybara",
+			"Spinosaurus",
+			"Bear Bee",
+			"T-Rex",
+			"Brontosaurus",
 			"Disco Bee",
 			"Butterfly",
 			"Queen Bee",
 			"Dragonfly",
 			"Raccoon",
-			"Red Fox",
+			"Fennec Fox",
 			"Mimic Octopus",
-			"Brontosaurus",
-			"Dilophosaurus",
-			"Ankylosaurus",
-			"Spinosaurus",
-			"T-Rex",
-			"Corrupted Kodama",
-			["Mochi Mouse"] = 3,
-			["Tarantula Hawk"] = 2,
-			["Bald Eagle"] = 5,
-			["Moon Cat"] = 10,
-			["Chicken"] = 2,
-			["Rooster"] = 2,
-			["Blood Kiwi"] = 5,
-			["Ostrich"] = 5,
-			["Kappa"] = 5,
-			["Capybara"] = 5,
-			["Praying Mantis"] = 5,
+			"Red Fox",
+			"Blood Owl",
 			["Starfish"] = 10,
-			["Nihonzaru"] = 5,
-			["Triceratops"] = 5,
-			["Bee"] = 3,
 		},
 		LockPet_Weight = 5, -- if Weight >= 10 they will locked
 	},
 
 	Webhook = {
-		UrlPet =
-		"https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
-		UrlSeed = "",
-		PcName = "PC",
+        UrlPet = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
+        UrlSeed = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
+        PcName = "SUPERCOMPUTER-NASA-888",
 
 		Noti = {
 			Seeds = {
 				"Sunflower",
 				"Dragon Pepper",
 				"Elephant Ears",
-				"Honeysuckle",
-				"Bone Blossom",
-				"Fossilight",
-
 			},
 			SeedPack = {
 				"Idk"
 			},
 			Pets = {
-				"Kitsune",
 				"French Fry Ferret",
+				"Corrupted Kitsune",
+				"Kitsune",
+				"Spinosaurus",
+				"T-Rex",
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Fennec Fox",
+				"Dragonfly",
+				"Raccoon",
+				"Red Fox",
+				"Lobster Thermidor",
 			},
 			Pet_Weight_Noti = true,
 		}
