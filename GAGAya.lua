@@ -10,7 +10,7 @@ getgenv().ConfigsKaitun = {
 	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation) -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
+	["Auto Rejoin"] = true,
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
@@ -64,6 +64,7 @@ getgenv().ConfigsKaitun = {
 				"Gorilla Chef",
 				"Cooking Cauldron",
 				"Gourmet Seed Pack",
+				"Sunny-Side Chicken",
 				-- u can add it more as u want, if it not in list.
 			}
 		},
