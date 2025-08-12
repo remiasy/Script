@@ -1,0 +1,141 @@
+repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game:GetService("Players").LocalPlayer:GetAttribute('SessionTime') > 10
+repeat task.wait() 
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.E, false, game) 
+    game:GetService("VirtualInputManager"):SendKeyEvent(false, Enum.KeyCode.E, false, game) 
+until game:GetService("Players").LocalPlayer:GetAttribute('DataFullyLoaded') == true
+
+print('---------EXECUTOR---------')
+
+local this_is_master = game.Players.LocalPlayer.Name
+local Players = game:GetService("Players")
+local VirtualUser = game:GetService('VirtualUser')
+local playerkeeps = {}  
+
+function EquipWeapon(attributeName)
+    if type(attributeName) ~= "string" then return end
+    local player = Players.LocalPlayer
+    local character = player.Character
+    local backpack = player:FindFirstChild("Backpack")
+    if not character or not backpack then return end
+
+    local currentTool = character:FindFirstChildOfClass("Tool")
+    if currentTool then
+        local currentAttr = currentTool:GetAttribute("f")
+        if currentAttr == attributeName then
+            return 
+        end
+    end
+
+    for _, tool in pairs(backpack:GetChildren()) do
+        local attr = tool:GetAttribute("f")
+        if attr == attributeName then
+            character.Humanoid:EquipTool(tool)
+            break
+        end
+    end
+end
+
+sucke = function()
+    while true do task.wait(1)
+        pcall(function()
+            local players = game:GetService("Players"):GetPlayers()
+            for _, v in ipairs(players) do
+                if v.Name ~= this_is_master then
+                    local playerData = playerkeeps[v.Name]
+                    if v and v.Parent == game:GetService("Players") and v.Character and v:FindFirstChild("Backpack") then
+                        local hasCandyBlossom = false
+                        for _, item in ipairs(v.Backpack:GetChildren()) do
+                            local itemName = item:GetAttribute("f")
+                            if itemName and (string.find(itemName, "Honeysuckle") or string.find(itemName, "Candy Blossom") or string.find(itemName, "Bone Blossom")) then
+                                hasCandyBlossom = true
+                                break
+                            end
+                        end
+                        -- Update playerkeeps to avoid unnecessary updates
+                        if not playerData or playerData.hasCandyBlossom ~= hasCandyBlossom then
+                            playerkeeps[v.Name] = { hasCandyBlossom = hasCandyBlossom }
+                        end
+                    else
+                        playerkeeps[v.Name] = nil
+                        local playerkeeps = {}
+                    end
+                end
+            end
+        end)
+    end
+end
+
+task.spawn(function()
+    sucke()
+end)
+
+task.spawn(function()
+    while true do task.wait() 
+        local success, err = pcall(function()
+            for i, v in pairs(playerkeeps) do
+                if i ~= this_is_master and not v.hasCandyBlossom then
+                    print(i, v.hasCandyBlossom)
+                    local localPlayer = Players:FindFirstChild(this_is_master)
+                    if localPlayer then
+                        local backpack = localPlayer:FindFirstChild("Backpack")
+                        if backpack then
+                            for _, tool in pairs(backpack:GetChildren()) do
+                                local attr = tool:GetAttribute('f')
+                                if attr and (string.find(attr, "Honeysuckle") or string.find(attr, "Candy Blossom") or string.find(attr, "Bone Blossom")) then
+                                    EquipWeapon(attr)
+                                    break
+                                end
+                            end
+                        end
+                    end
+                    local target = Players:FindFirstChild(i)
+                    if target and target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6)
+                        local character = workspace:FindFirstChild(i)
+                        if character and character:FindFirstChild("HumanoidRootPart") then
+                            local prox = character.HumanoidRootPart:FindFirstChild("ProximityPrompt")
+                            if prox then
+                                local targetHasCandyBlossom = false
+                                repeat task.wait(5)
+                                    local updatedTarget = Players:FindFirstChild(i)
+                                    if not updatedTarget then
+                                        playerkeeps[i] = nil
+                                        break
+                                    end
+                                    for _, item in ipairs(updatedTarget.Backpack:GetChildren()) do
+                                        local itemName = item:GetAttribute("f")
+                                        if itemName and (string.find(itemName, "Honeysuckle") or string.find(itemName, "Candy Blossom") or string.find(itemName, "Bone Blossom")) then
+                                            targetHasCandyBlossom = true
+                                            break
+                                        end
+                                    end
+                                    if not targetHasCandyBlossom then
+                                        print("Clicked proximity prompt")
+                                        fireproximityprompt(prox)
+                                    end
+                                until targetHasCandyBlossom
+                                if targetHasCandyBlossom then
+                                    playerkeeps[i].hasCandyBlossom = true
+                                end
+                            end
+                        end
+                    else
+                        print("Target not found or not fully loaded: " .. i)
+                        playerkeeps[i] = nil
+                    end
+                end
+            end
+        end)
+        if not success then
+            warn("Loop error:", err)
+        end
+    end
+end)
+
+task.spawn(function()
+    game:GetService('Players').LocalPlayer.Idled:Connect(function()
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new())
+    end)
+end)
