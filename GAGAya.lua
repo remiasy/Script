@@ -268,7 +268,6 @@ getgenv().ConfigsKaitun = {
 				"Kitsune",
 				"Corrupted Kitsune",
 				"Raiju",
-				"Spaghetti Sloth",
 				"French Fry Ferret",
 				"Lobster Thermidor",
 			},
