@@ -62,9 +62,9 @@ getgenv().ConfigsKaitun = {
 				"Culinarian Chest",
 				"Gourmet Egg",
 				"Gorilla Chef",
-				"Cooking Cauldron",
 				"Gourmet Seed Pack",
 				"Sunny-Side Chicken",
+				"Cooking Cauldron",
 				-- u can add it more as u want, if it not in list.
 			}
 		},
