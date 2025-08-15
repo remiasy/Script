@@ -59,8 +59,8 @@ getgenv().ConfigsKaitun = {
 		["Cook Event"] = {
 			Minimum_Money = 10_000, -- minimum money to start play this event
 			Rewards_Item = { -- The top is the most top mean prefered.
-				"Culinarian Chest",
 				"Gourmet Egg",
+				"Culinarian Chest",
 				"Gorilla Chef",
 				"Gourmet Seed Pack",
 				"Sunny-Side Chicken",
@@ -121,12 +121,12 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Paradise Egg",
 			"Gourmet Egg",
 			"Zen Egg",
 			"Anti Bee Egg",
 			"Primal Egg",
 			"Bug Egg",
-			"Paradise Egg",
 			"Night Egg",
 			"Dinosaur Egg",
 			"Oasis Egg",
