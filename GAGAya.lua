@@ -10,7 +10,7 @@ getgenv().ConfigsKaitun = {
 	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation) -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
+	["Auto Rejoin"] = false,
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
@@ -26,16 +26,15 @@ getgenv().ConfigsKaitun = {
 			"Dragon Pepper",
 			"Elephant Ears",
 			"Fossilight",
-			["Tomato"] = 400,
+			"Princess Thorn",
 		}
 	},
 
 	Seed = {
 		Buy = {
-			Mode = "Custom", -- Custom , Auto
+			Mode = "Auto", -- Custom , Auto
 			Custom = {
 				"Carrot",
-				"Tomato",
 			}
 		},
 		Place = {
@@ -56,17 +55,17 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Events = {
-		["Cook Event"] = {
-			Minimum_Money = 10_000, -- minimum money to start play this event
-			Rewards_Item = { -- The top is the most top mean prefered.
-				"Gourmet Egg",
-				"Culinarian Chest",
-				"Gorilla Chef",
-				"Gourmet Seed Pack",
-				"Sunny-Side Chicken",
-				"Cooking Cauldron",
-				-- u can add it more as u want, if it not in list.
-			}
+		["Bean Event"] = {
+			Minimum_Money = 100_000, -- minimum money to start play this event
+		},
+		Shop = { -- delete -- to buy
+			"Sprout Egg",
+			"Sprout Seed Pack",
+			-- "Mandrake",
+			"Silver Fertilizer",
+			-- "Canary Melon",
+			-- "Amberheart",
+			"Spriggan",
 		},
 		["Traveling Shop"] = {
 			"Bald Eagle",
@@ -80,25 +79,7 @@ getgenv().ConfigsKaitun = {
 			--"Honeysuckle",
 			--"Lightning Rod",
 		},
-		Shop = {
-			--"Traveler's Fruit",
-			--"Summer Seed Pack",
-			--"Flower Seed Pack",
-			--"Hamster",
-			--"Oasis Egg",
-			--"Delphinium",
-			--"Lily of the Valley",
-			--"Raiju",
-			"Zen Egg",
-			--"Spiked Mango",
-			"Zen Seed Pack",
-			--"Zenflare",
-			--"Soft Sunshine",
-			--"Koi",
-			--"Spiked Mango",
-			--"Pet Shard Tranquil",
-		},
-		Start_Do_Honey = 1_000_000
+		Start_Do_Honey = 100_000
 	},
 	
 	Gear = {
@@ -121,12 +102,13 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
-			"Paradise Egg",
+			"Sprout Egg",
 			"Gourmet Egg",
 			"Zen Egg",
 			"Anti Bee Egg",
 			"Primal Egg",
 			"Bug Egg",
+			"Paradise Egg",
 			"Night Egg",
 			"Dinosaur Egg",
 			"Oasis Egg",
@@ -137,6 +119,7 @@ getgenv().ConfigsKaitun = {
 			"Uncommon Egg",
 		},
 		Buy = {
+			"Sprout Egg",
 			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
@@ -161,23 +144,23 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Bacon Pig"] = { 8, 75, 1 },
-				["Starfish"] = { 8, 75, 2 },
+				--["Bacon Pig"] = { 8, 75, 1 },
+				["Starfish"] = { 8, 75, 1 },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
-				--["Tarantula Hawk"] = { 2, 101, 1 },
-				["Gorilla Chef"] = { 8, 101, 1 },
-				["Bacon Pig"] = { 8, 101, 2 },
-				["Tanchozuru"] = { 8, 101, 3 },
-				["Kappa"] = { 8, 101, 4 },
-				["Spaghetti Sloth"] = { 8, 101, 5 },
-				["Corrupted Kodama"] = { 8, 101, 6 },
-				["Kodama"] = { 8, 101, 7 },
-				["Blood Kiwi"] = { 8, 101, 8 },
-				["Rooster"] = { 8, 101, 9 },
-				["Ostrich"] = { 5, 101, 10 },
-				["Starfish"] = { 8, 75, 11 },
+				["Tarantula Hawk"] = { 2, 101, 1 },
+				--["Gorilla Chef"] = { 8, 101, 1 },
+				--["Bacon Pig"] = { 8, 101, 2 },
+				--["Tanchozuru"] = { 8, 101, 3 },
+				--["Kappa"] = { 8, 101, 4 },
+				--["Spaghetti Sloth"] = { 8, 101, 5 },
+				--["Corrupted Kodama"] = { 8, 101, 6 },
+				--["Kodama"] = { 8, 101, 7 },
+				["Blood Kiwi"] = { 8, 101, 2 },
+				["Rooster"] = { 8, 101, 3 },
+				["Sunny-Side Chicken"] = { 1, 101, 4 },
+				["Starfish"] = { 8, 75, 5 },
 			},
 		},
 		Favorite_LockedPet = true,
@@ -200,6 +183,9 @@ getgenv().ConfigsKaitun = {
 			"Raiju",
 			"French Fry Ferret",
 			"Lobster Thermidor",
+			"Golden Goose",
+			["Spriggan"] = 5,
+			["Sunny-Side Chicken"] = 1,
 			["Bacon Pig"] = 8,
 			["Gorilla Chef"] = 8,
 			["Ostrich"] = 5,
@@ -235,7 +221,7 @@ getgenv().ConfigsKaitun = {
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
 		UrlSeed = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
-		PcName = "remia",
+		PcName = "remiasy",
 		
 		Noti = {
 			Seeds = {
@@ -271,6 +257,7 @@ getgenv().ConfigsKaitun = {
 				"Raiju",
 				"French Fry Ferret",
 				"Lobster Thermidor",
+				"Golden Goose",
 			},
 			Pet_Weight_Noti = true,
 		}
