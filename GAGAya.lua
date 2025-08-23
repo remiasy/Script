@@ -1,3 +1,4 @@
+setfpscap(5)
 task.wait(5)
 getgenv().ConfigsKaitun = {
 	Beta_Fix_Data_Sync = true,
@@ -7,7 +8,6 @@ getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
 
 	Collect_Cooldown = 300,
-	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation) -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
@@ -27,14 +27,14 @@ getgenv().ConfigsKaitun = {
 			"Elephant Ears",
 			"Fossilight",
 			"Princess Thorn",
-            ["Blueberry"] = 12,
-            ["Strawberry"] = 12,
-            ["Apple"] = 10,
-            ["Coconut"] = 12,
-            ["Dragon Fruit"] = 12,
-            ["Mango"] = 12,
-            ["Tomato"] = 20,
-            ["Cactus"] = 12,
+            ["Blueberry"] = 15,
+            ["Strawberry"] = 15,
+            ["Apple"] = 15,
+            ["Coconut"] = 15,
+            ["Dragon Fruit"] = 15,
+            ["Mango"] = 15,
+            ["Tomato"] = 15,
+            ["Cactus"] = 15,
 		}
 	},
 
@@ -173,6 +173,9 @@ getgenv().ConfigsKaitun = {
                 "Zen Rocks",
                 "Enkaku",
                 "Corn",
+				"Crown of Thorns",
+				"Calla Lily",
+				"Cyclamen",
 
 			}
 		},
@@ -197,15 +200,18 @@ getgenv().ConfigsKaitun = {
 		["Bean Event"] = {
 			Minimum_Money = 100_000, -- minimum money to start play this event
 		},
-		MaxMoney_Restocks = 5_000_000_000,
+		MaxMoney_Restocks = 8_000_000_000,
 		Shop = { -- delete -- to buy
+			"Skyroot Chest",
 			"Sprout Egg",
 			"Sprout Seed Pack",
-			"Mandrake",
-			"Silver Fertilizer",
+			-- "Mandrake",
+			--"Silver Fertilizer",
 			-- "Canary Melon",
 			-- "Amberheart",
-			"Spriggan",
+			--["Spriggan"] = 8,
+			-- Friend Shop
+			--"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
             "Bee Egg",
@@ -225,9 +231,10 @@ getgenv().ConfigsKaitun = {
             "Flower Seed Pack"
 		},
 		Craft = {
+			"Sprout Egg",
+			"Anti Bee Egg",
 			"Primal Egg",
 			"Ancient Seed Pack",
-			"Anti Bee Egg",
 			--"Honeysuckle",
 			--"Lightning Rod",
 		},
@@ -244,6 +251,7 @@ getgenv().ConfigsKaitun = {
 			"Medium Toy",
 			"Medium Treat",
 			"Level Up Lollipop",
+			"LevelUp Lollipop",
 			"Tanning Mirror",
 			"Grandmaster Spinkler"
 		},
@@ -255,15 +263,15 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Sprout Egg",
-			"Gourmet Egg",
-			"Zen Egg",
+			--"Gourmet Egg",
+			--"Zen Egg",
 			"Anti Bee Egg",
-			"Primal Egg",
+			--"Primal Egg",
 			"Bug Egg",
 			"Paradise Egg",
-			"Night Egg",
-			"Dinosaur Egg",
-			"Oasis Egg",
+			--"Night Egg",
+			--"Dinosaur Egg",
+			--"Oasis Egg",
 			--"Mythical Egg",
 			--"Legendary Egg",
 			"Common Summer Egg",
@@ -272,19 +280,19 @@ getgenv().ConfigsKaitun = {
 		},
 		Buy = {
 			"Sprout Egg",
-			"Gourmet Egg",
-			"Zen Egg",
-			"Primal Egg",
-			"Night Egg",
+			--"Gourmet Egg",
+			--"Zen Egg",
+			--"Primal Egg",
+			--"Night Egg",
 			"Bug Egg",
 			"Anti Bee Egg",
-			"Dinosaur Egg",
-			"Oasis Egg",
+			--"Dinosaur Egg",
+			--"Oasis Egg",
 			"Paradise Egg",
 			--"Mythical Egg",
-			"Legendary Egg",
+			--"Legendary Egg",
 			"Bee Egg",
-			"Rare Summer Egg",
+			--"Rare Summer Egg",
 			"Common Summer Egg",
 			"Rare Egg",
 			"Uncommon Egg",
@@ -293,11 +301,15 @@ getgenv().ConfigsKaitun = {
 	},
 	
 	Pets = {
+		["Auto Feed"] = true,
+
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				--["Bacon Pig"] = { 8, 75, 1 },
 				["Starfish"] = { 8, 75, 1 },
+				["Chicken"] = { 8 , 75, 2},
+				["Rooster"] = { 8, 75, 3 },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
@@ -312,9 +324,11 @@ getgenv().ConfigsKaitun = {
 				["Blood Kiwi"] = { 8, 101, 2 },
 				["Rooster"] = { 8, 101, 3 },
 				["Sunny-Side Chicken"] = { 1, 101, 4 },
-				["Starfish"] = { 8, 75, 5 },
+				["Chicken"] = { 8 , 101, 5}
+				["Starfish"] = { 8, 75, 6 },
 			},
 		},
+		Unfavorite_AllPet = false,
 		Favorite_LockedPet = true,
 		Locked = {
 			"Disco Bee",
@@ -336,14 +350,12 @@ getgenv().ConfigsKaitun = {
 			"French Fry Ferret",
 			"Lobster Thermidor",
 			"Golden Goose",
-			["Spriggan"] = 5,
+			"Griffin",
 			["Sunny-Side Chicken"] = 1,
-			["Ostrich"] = 5,
-			["Corrupted Kodama"] = 8,
 			["Tarantula Hawk"] = 2,
 			["Bald Eagle"] = 5,
 			["Moon Cat"] = 10,
-			["Chicken"] = 2,
+			["Chicken"] = 8,
 			["Rooster"] = 2,
 			["Blood Kiwi"] = 5,
 			["Starfish"] = 8,
@@ -362,13 +374,26 @@ getgenv().ConfigsKaitun = {
 			"Tanuki",
 			"Manaki-Neko",
 			"Seagull",
+			"Bagel Bunny",
+			"Bacon Pig",
+			"Dairy Cow",
+			"Pancake Mole",
+			"Hotdog Daschund",
+			"Gorilla Chef",
+			"Seedling",
+			"Sushi Bear",
+			"Jackalope",
+			"Black Bunny",
+			"Deer",
+			"Spotted Deer",
+			"Pig",
 		}
 	},
 
 	Webhook = {
-		UrlPet = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
+		UrlPet = ""https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS,
 		UrlSeed = "",
-		PcName = "remia1234",
+		PcName = "RemiaABCAlone",
 		
 		Noti = {
 			Seeds = {
@@ -380,6 +405,7 @@ getgenv().ConfigsKaitun = {
 				"Fossilight",
 				"Maple Apple",
 				"Grand Tomato",
+				"Cyclamen",
 			},
 			SeedPack = {
 				"Idk"
@@ -405,6 +431,7 @@ getgenv().ConfigsKaitun = {
 				"French Fry Ferret",
 				"Lobster Thermidor",
 				"Golden Goose",
+				"Griffin",
 			},
 			Pet_Weight_Noti = true,
 		}
