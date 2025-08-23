@@ -228,7 +228,7 @@ getgenv().ConfigsKaitun = {
             "Loquat",
             "Feijoa",
             "Pitcher Plant",
-            "Flower Seed Pack"
+            "Flower Seed Pack",
 		},
 		Craft = {
 			"Sprout Egg",
@@ -253,7 +253,7 @@ getgenv().ConfigsKaitun = {
 			"Level Up Lollipop",
 			"LevelUp Lollipop",
 			"Tanning Mirror",
-			"Grandmaster Spinkler"
+			"Grandmaster Sprinkler",
 		},
 		Lock = {
 
@@ -296,7 +296,7 @@ getgenv().ConfigsKaitun = {
 			"Common Summer Egg",
 			"Rare Egg",
 			"Uncommon Egg",
-			"Common Egg"
+			"Common Egg",
 		}
 	},
 	
@@ -324,7 +324,7 @@ getgenv().ConfigsKaitun = {
 				["Blood Kiwi"] = { 8, 101, 2 },
 				["Rooster"] = { 8, 101, 3 },
 				["Sunny-Side Chicken"] = { 1, 101, 4 },
-				["Chicken"] = { 8 , 101, 5}
+				["Chicken"] = { 8 , 101, 5},
 				["Starfish"] = { 8, 75, 6 },
 			},
 		},
@@ -391,9 +391,9 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Webhook = {
-		UrlPet = ""https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS,
+		UrlPet = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
 		UrlSeed = "",
-		PcName = "RemiaABCAlone",
+		PcName = "RemiaLOVECAT",
 		
 		Noti = {
 			Seeds = {
