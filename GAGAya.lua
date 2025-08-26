@@ -5,7 +5,7 @@ getgenv().ConfigsKaitun = {
 
 	NoDeletePlayer = false,
 
-	["Block Pet Gift"] = true,
+	["Block Pet Gift"] = false,
 
 	Collect_Cooldown = 300,
 
