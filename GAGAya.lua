@@ -5,14 +5,14 @@ getgenv().ConfigsKaitun = {
 
 	NoDeletePlayer = false,
 
-	["Block Pet Gift"] = true,
+	["Block Pet Gift"] = false,
 
-	Collect_Cooldown = 150,
+	Collect_Cooldown = 60,
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
+	["Auto Rejoin"] = true,
 	
-	["Rejoin When Update"] = false,
+	["Rejoin When Update"] = true,
 	["Limit Tree"] = {
 		["Limit"] = 450,
 		["Destroy Untill"] = 450,
