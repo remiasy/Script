@@ -10,7 +10,7 @@ getgenv().ConfigsKaitun = {
 	Collect_Cooldown = 60,
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
+	["Auto Rejoin"] = false,
 	
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
