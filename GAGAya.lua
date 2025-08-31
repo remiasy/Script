@@ -207,8 +207,8 @@ getgenv().ConfigsKaitun = {
 		["Fairy Event"] = {
 			Minimum_Money = 100_000, -- minimum money to start play this event
 			Rewards_Item = {
-				"FairyPoints",
 				"Enchanted Egg",
+				"FairyPoints",
 				"Enchanted Seed Pack",
 			},
 			Upgrade = {
