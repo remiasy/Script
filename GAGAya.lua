@@ -500,9 +500,6 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
-License = ""
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
 License = "O0ckL79tK6KwnmX2uanEfo7bosg2uYQt"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
 --https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS
