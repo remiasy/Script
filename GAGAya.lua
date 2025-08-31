@@ -240,9 +240,9 @@ getgenv().ConfigsKaitun = {
 					"Loose Fairy Spawn Amount",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 5, -- max 10
+					["Glimmer Multiplier"] = 10, -- max 10
 					["Loose Fairy Spawn Amount"] = 0, -- max 4
-					["Fairy Event Duration"] = 5, -- max 10
+					["Fairy Event Duration"] = 0, -- max 10
 					["Fairy Spawn Amount"] = 0, -- max 9
 				}
 			}
@@ -454,7 +454,7 @@ getgenv().ConfigsKaitun = {
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
 		UrlSeed = "",
-		PcName = "remialoveakiandkaidow",
+		PcName = "RemiaMailoveAYALAISUS",
 		
 		Noti = {
 			Seeds = {
