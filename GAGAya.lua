@@ -7,7 +7,7 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 300,
+	Collect_Cooldown = 150,
 
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
@@ -28,34 +28,34 @@ getgenv().ConfigsKaitun = {
 			"Fossilight",
 			"Princess Thorn",
 			-- for the event
-			Bamboo = 2,
-			Coconut = 2,
-			Mushroom = 2,
-			Glowthorn = 2,
-			Tomato = 2,
-			Pumpkin = 2,
-			Pepper = 2,
-			Cacao = 2,
-			Apple = 2,
-			Romanesco = 2,
-			["Elder Strawberry"] = 2,
-			["Burning Bud"] = 2,
-			["Giant Pinecone"] = 2,
-			Corn = 2,
-			["Sugar Apple"] = 2,
-			["Ember Lily"] = 2,
-			["Dragon Fruit"] = 2,
-			Sunbulb = 2,
-			["Orange Tulip"] = 2,
-			Blueberry = 2,
-			Watermelon = 2,
-			Mango = 2,
-			Cactus = 2,
-			Strawberry = 2,
-			Beanstalk = 2,
-			Lightshoot = 2,
-			Grape = 2,
-			Daffodil = 2,
+			Bamboo = 4,
+			Coconut = 4,
+			Mushroom = 4,
+			Glowthorn = 4,
+			Tomato = 4,
+			Pumpkin = 4,
+			Pepper = 4,
+			Cacao = 4,
+			Apple = 4,
+			Romanesco = 4,
+			["Elder Strawberry"] = 4,
+			["Burning Bud"] = 4,
+			["Giant Pinecone"] = 4,
+			Corn = 4,
+			["Sugar Apple"] = 4,
+			["Ember Lily"] = 4,
+			["Dragon Fruit"] = 4,
+			Sunbulb = 4,
+			["Orange Tulip"] = 4,
+			Blueberry = 4,
+			Watermelon = 4,
+			Mango = 4,
+			Cactus = 4,
+			Strawberry = 4,
+			Beanstalk = 4,
+			Lightshoot = 4,
+			Grape = 4,
+			Daffodil = 4,
 		}
 	},
 
@@ -454,7 +454,7 @@ getgenv().ConfigsKaitun = {
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
 		UrlSeed = "",
-		PcName = "RemiaMailoveAYALAISUS",
+		PcName = "RemiaMaiLOVEAYALAISUS",
 		
 		Noti = {
 			Seeds = {
@@ -500,6 +500,9 @@ getgenv().ConfigsKaitun = {
 		}
 	},
 }
+License = ""
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
 License = "O0ckL79tK6KwnmX2uanEfo7bosg2uYQt"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
 --https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS
