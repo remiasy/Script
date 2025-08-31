@@ -220,10 +220,10 @@ getgenv().ConfigsKaitun = {
 					"Loose Fairy Spawn Amount",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 10, -- max 10
-					["Loose Fairy Spawn Amount"] = 4, -- max 4
-					["Fairy Event Duration"] = 10, -- max 10
-					["Fairy Spawn Amount"] = 9, -- max 9
+					["Glimmer Multiplier"] = 5, -- max 10
+					["Loose Fairy Spawn Amount"] = 0, -- max 4
+					["Fairy Event Duration"] = 5, -- max 10
+					["Fairy Spawn Amount"] = 0, -- max 9
 				}
 			}
 		},
