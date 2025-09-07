@@ -6,7 +6,7 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 60,
+	Collect_Cooldown = 150,
 
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = true,
