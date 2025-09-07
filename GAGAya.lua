@@ -6,12 +6,12 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 300,
+	Collect_Cooldown = 150,
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
+	["Auto Rejoin"] = true,
 
-	["Rejoin When Update"] = false,
+	["Rejoin When Update"] = true,
 
 	["Auto Trade Pet"] = { -- not done yet bro dont use
 		["Enabled"] = false,
@@ -23,8 +23,8 @@ getgenv().ConfigsKaitun = {
 	},
 
 	["Limit Tree"] = {
-		["Limit"] = 450,
-		["Destroy Untill"] = 450,
+		["Limit"] = 250,
+		["Destroy Untill"] = 200,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -251,7 +251,7 @@ getgenv().ConfigsKaitun = {
 					"Loose Fairy Spawn Amount",
 				},
 		Limit = {
-					["Glimmer Multiplier"] = 5, -- max 10
+					["Glimmer Multiplier"] = 10, -- max 10
 					["Loose Fairy Spawn Amount"] = 10, -- max 10
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
