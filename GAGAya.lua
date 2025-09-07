@@ -6,7 +6,7 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 300,
+	Collect_Cooldown = 60,
 
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
@@ -23,8 +23,8 @@ getgenv().ConfigsKaitun = {
 	},
 
 	["Limit Tree"] = {
-		["Limit"] = 450,
-		["Destroy Untill"] = 450,
+		["Limit"] = 250,
+		["Destroy Untill"] = 250,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -36,37 +36,35 @@ getgenv().ConfigsKaitun = {
 			"Elephant Ears",
 			"Fossilight",
 			"Princess Thorn",
-
-			Bamboo = 5,
-			Mushroom = 5,
-			Glowthorn = 5,
-			Pumpkin = 5,
-			Pepper = 5,
-			Cacao = 5,
-			Romanesco = 5,
-			Watermelon = 5,
-			Beanstalk = 5,
-			Lightshoot = 5,
-			Grape = 5,
-			Daffodil = 5,
-			Sunbulb = 10,
-
-			["Blueberry"] = 5,
-			["Strawberry"] = 5,
-			["Apple"] = 5,
-			["Coconut"] = 5,
-			["Dragon Fruit"] = 5,
-			["Mango"] = 5,
-			["Tomato"] = 5,
-			["Cactus"] = 5,
-			["Corn"] = 5,
-			["Elder Strawberry"] = 5,
-			["Burning Bud"] = 5,
-			["Giant Pinecone"] = 5,
-			["Sugar Apple"] = 5,
-			["Ember Lily"] = 5,
-			["Orange Tulip"] = 5,
-
+			-- for the event
+			Bamboo = 4,
+			Coconut = 4,
+			Mushroom = 4,
+			Glowthorn = 4,
+			Tomato = 4,
+			Pumpkin = 4,
+			Pepper = 4,
+			Cacao = 4,
+			Apple = 4,
+			Romanesco = 4,
+			["Elder Strawberry"] = 4,
+			["Burning Bud"] = 4,
+			["Giant Pinecone"] = 4,
+			Corn = 4,
+			["Sugar Apple"] = 4,
+			["Ember Lily"] = 4,
+			["Dragon Fruit"] = 4,
+			Sunbulb = 8,
+			["Orange Tulip"] = 4,
+			Blueberry = 4,
+			Watermelon = 4,
+			Mango = 4,
+			Cactus = 4,
+			Strawberry = 4,
+			Beanstalk = 4,
+			Lightshoot = 4,
+			Grape = 4,
+			Daffodil = 4,
 		}
 	},
 
@@ -222,7 +220,15 @@ getgenv().ConfigsKaitun = {
 				"Carrot"
 			},
 			Lock = {
-
+				"Maple Apple",
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Moon Melon",
+				"Easter Egg",
+				"Moon Mango",
+				"Bone Blossom",
+				"Fossilight",
 			}
 		}
 	},
@@ -236,22 +242,25 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		["Fairy Event"] = {
-			Minimum_Money = 100_000, -- minimum money to start play this event
-			Rewards_Item = {
+			Minimum_Money = 10_000_000, -- minimum money to start play this event
+			Rewards_Item = { -- top mean select first
+				"Pet Shard Glimmering",
 				"Enchanted Egg",
+				"Mutation Spray Glimmering",
 				"FairyPoints",
+				"Fairy Targeter",
 				"Enchanted Seed Pack",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
 				Order = { -- top upgrade first, not put mean not upgrade
-					"Glimmer Multiplier",
-					"Fairy Event Duration",
 					"Fairy Spawn Amount",
 					"Loose Fairy Spawn Amount",
+					"Glimmer Multiplier",
+					"Fairy Event Duration",
 				},
 		Limit = {
-					["Glimmer Multiplier"] = 5, -- max 10
+					["Glimmer Multiplier"] = 10, -- max 10
 					["Loose Fairy Spawn Amount"] = 10, -- max 10
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
@@ -259,42 +268,29 @@ getgenv().ConfigsKaitun = {
 			}
 		},
 		MaxMoney_Restocks = 10_000_000_000,
-		Shop = { -- delete -- to buy
+		Shop = { -- un comment to buy
 			"Enchanted Chest",
 			"Pet Shard Glimmering",
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
-			"Skyroot Chest",
-			"Sprout Egg",
+			-- "Drake",
+
 			"Sprout Seed Pack",
+			"Sprout Egg",
 			-- "Mandrake",
-			--"Silver Fertilizer",
+			"Silver Fertilizer",
 			-- "Canary Melon",
 			-- "Amberheart",
-			--["Spriggan"] = 8,
+			["Spriggan"] = 8,
 			-- Friend Shop
-			--"Pet Shard GiantBean",
+			"Skyroot Chest",
+			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
-            "Bee Egg",
-			"Bald Eagle",
-            "Cauliflower",
-            "Rafflesia",
-            "Green Apple",
-            "Avocado",
-            "Banana",
-            "Pineapple",
-            "Kiwi",
-            "Bell Pepper",
-            "Prickly Pear",
-            "Loquat",
-            "Feijoa",
-            "Pitcher Plant",
-            "Flower Seed Pack",
-			"Common Summer Egg",
-			"Rare Summer Egg",
-			"Paradise Egg"
-
+			"Bee Egg",
+			"Paradise Egg", 
+			"Rare Summer Egg", 
+			"Common Summer Egg"
 		},
 		Craft = {
 			"Enchanted Chest",
@@ -309,22 +305,23 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Gear = {
-		Buy = {
+		Buy = { 
 			"Master Sprinkler",
 			"Godly Sprinkler",
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
 			"Lightning Rod",
-			"Medium Toy",
-			"Medium Treat",
 			"Level Up Lollipop",
-			"LevelUp Lollipop",
-			"Tanning Mirror",
-			"Grandmaster Sprinkler",
+			"Medium Treat",
+			"Medium Toy",
+			"Harvest Tool",
 		},
 		Lock = {
-			"Level Up Lollipop",
-			"LevelUp Lollipop",
+			"Master Sprinkler",
+			"Godly Sprinkler",
+			"Advanced Sprinkler",
+			"Basic Sprinkler",
+			"Lightning Rod",
 		},
 	},
 
@@ -376,41 +373,32 @@ getgenv().ConfigsKaitun = {
 			["PET NAME"] = {}
 		},
 
+	Pets = {
+		["Auto Feed"] = true,
+
+		MutationPet = {
+			["PET NAME"] = { "Glimmering","... any other" }
+		},
+
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Little Auto Equip"] = true, -- when it no target pet in list it will equip random/smart before real list have pet
 			["Pet"] = {
-				--["Bacon Pig"] = { 8, 75, 1 },
-				["Glimmering Sprite"] = { 8, 101, 1 },
-				["Starfish"] = { 8, 75, 2 },
-				["Chicken"] = { 8, 75, 3 },
-				["Rooster"] = { 8, 75, 3 },
+				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 5,
+			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				--["Tarantula Hawk"] = { 2, 101, 1 },
-				--["Gorilla Chef"] = { 8, 101, 1 },
-				--["Bacon Pig"] = { 8, 101, 2 },
-				--["Tanchozuru"] = { 8, 101, 3 },
-				--["Kappa"] = { 8, 101, 4 },
-				--["Spaghetti Sloth"] = { 8, 101, 5 },
-				--["Corrupted Kodama"] = { 8, 101, 6 },
-				--["Kodama"] = { 8, 101, 7 },
-				["Glimmering Sprite"] = { 3, 100, 1 },
-				["Rooster"] = { 8, 100, 1 },
-				["Chicken"] = { 8, 100, 2 },
-				["Golem"] = { 8, 100, 3 },
-
-
-				["Tanchozuru"] = { 5, 100 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible
-				["Ostrich"] = { 3, 100 },
+				["Glimmering Sprite"] = {8, 100, 1},
+				["Tanchozuru"] = { 5, 100, 2 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
+				["Ostrich"] = { 3, 100, 2 },
 				["Blood Kiwi"] = { 8, 100 },
 				["Seal"] = { 8, 100 },
+				["Rooster"] = { 8, 100 },
 				["Starfish"] = { 5, 75 },
 			},
 		},
-		Unfavorite_AllPet = true,
-		Favorite_LockedPet = false,
+		Unfavorite_AllPet = false,
+		Favorite_LockedPet = true,
 		Locked = {
 			"Disco Bee",
 			"Butterfly",
@@ -432,6 +420,7 @@ getgenv().ConfigsKaitun = {
 			"Lobster Thermidor",
 			"Golden Goose",
 			"Griffin",
+			"Cockatrice",
 			["Glimmering Sprite"] = 8,
 			["Sunny-Side Chicken"] = 1,
 			["Tarantula Hawk"] = 2,
