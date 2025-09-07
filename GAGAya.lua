@@ -9,9 +9,9 @@ getgenv().ConfigsKaitun = {
 	Collect_Cooldown = 60,
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
+	["Auto Rejoin"] = true,
 
-	["Rejoin When Update"] = false,
+	["Rejoin When Update"] = true,
 
 	["Auto Trade Pet"] = { -- not done yet bro dont use
 		["Enabled"] = false,
@@ -242,7 +242,7 @@ getgenv().ConfigsKaitun = {
 
 	Events = {
 		["Fairy Event"] = {
-			Minimum_Money = 10_000_000, -- minimum money to start play this event
+			Minimum_Money = 100000, -- minimum money to start play this event
 			Rewards_Item = { -- top mean select first
 				"Pet Shard Glimmering",
 				"Enchanted Egg",
