@@ -25,8 +25,8 @@ getgenv().Configs = {
 }
 getgenv().GoogleSheetLog = {
     -- Google Sheet
-    Enable = false, -- เปิดใช้ฟีเจอร์
-    WebAppURL = "" -- ใส่ URL ของ Google Apps Script ที่เชื่อมต่อกับ Google Sheets ของคุณ
+    Enable = true, -- เปิดใช้ฟีเจอร์
+    WebAppURL = "https://script.google.com/macros/s/AKfycbxW_4f-sfF-R2I1O8Xy1EVFv9mDqZQIHNWWQ_kfVCaiOZkGfQuVLV6n_2kqs92KB-hk/exec" -- ใส่ URL ของ Google Apps Script ที่เชื่อมต่อกับ Google Sheets ของคุณ
 
 }
 loadstring(game:HttpGet("https://gist.githubusercontent.com/Clehxb/7ea49f500b6e941f7b6332f6879cd059/raw/99NightLoader"))()
