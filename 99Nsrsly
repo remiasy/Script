@@ -1,7 +1,7 @@
 script_key="csMoBLNmnQOQhlwgsrcJottDXRLMsVRT";
 getgenv().Configs = {
     -- แจ้งเตือน ( Notify )
-    WebhookUrl = "", -- ลิ้ง Webhook Discord
+    WebhookUrl = "https://discord.com/api/webhooks/1414198925853724762/fFfEdaR23BiZo2f-LoC636BZP7Ft0FjTtujZiLrDoTqXDwE5FGx7pjMSxYM5L30k-f3z", -- ลิ้ง Webhook Discord
     WebhookOneTime = false, -- ถ้าเป็น true จะแจ้งเฉพาะตอน Diamond ถึงที่กำหนด
     DisableLogRAM = true, -- ปิด Log ของ Account Manager
 
