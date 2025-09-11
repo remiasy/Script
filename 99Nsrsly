@@ -1,0 +1,9 @@
+_G.Lock = { -- Cyborg , Assassin , Pyromaniac 
+    "NIL" -- ถ้าใส่ NIL ก็คือไม่ต้องซื้ออาชีพ เก็บเพชรยาวๆ
+}
+_G.AddFriend = true -- เพิ่มเพื่อนออโต้ true / false
+_G.Max_Diamond = 10000 -- เมื่อเพชรครบ 10,000 จะหยุดฟาม
+
+_G.Webhook = "https://discord.com/api/webhooks/1414199270453678100/3kyRe0evPu9v9LzO7jacEuIdTwI6B2ZGG7ASQ0bmhMKlJ1lKcldoiJZyPN2e9JNB7eF8" -- ใส่ลิ้งค์Webhook เพื่อรับการแจ้งเตือนผลการฟามเพชรทุกๆ 300วินาที
+script_key = "SVdgjxFeJwgxHJkypyuXyFMdRyTRhRbu"
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/01709cce17ad46627252bc1c24cb74bd.lua"))()
