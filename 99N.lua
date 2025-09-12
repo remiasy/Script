@@ -25,7 +25,7 @@ getgenv().Configs = {
 }
 getgenv().GoogleSheetLog = {
     -- Google Sheet
-    Enable = true, -- เปิดใช้ฟีเจอร์
+    Enable = false, -- เปิดใช้ฟีเจอร์
     WebAppURL = "https://script.google.com/macros/s/AKfycbxW_4f-sfF-R2I1O8Xy1EVFv9mDqZQIHNWWQ_kfVCaiOZkGfQuVLV6n_2kqs92KB-hk/exec" -- ใส่ URL ของ Google Apps Script ที่เชื่อมต่อกับ Google Sheets ของคุณ
 
 }
