@@ -1,4 +1,4 @@
-setfpscap(30)
+setfpscap(25)
 script_key="csMoBLNmnQOQhlwgsrcJottDXRLMsVRT";
 getgenv().Configs = {
     -- แจ้งเตือน ( Notify )
