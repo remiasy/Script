@@ -11,8 +11,8 @@ _G.MainSettings = {
     ['WhiteScreen'] = true,
     ['CloseUI'] = false,
     ["NotifycationExPRemove"] = true,
-    ['AFKCheck'] = 150,
-    ["LockFragments"] = 20000,
+    ['AFKCheck'] = 300,
+    ["LockFragments"] = 200000,
     ["LockFruitsRaid"] = {
         [1] = "Dough-Dough",
         [2] = "Dragon-Dragon",        
@@ -42,7 +42,7 @@ _G.Races_Settings = {
                 ["Human"] = false,
                 ["Fishman"] = true
             },
-            ["RerollsWhenFragments"] = 20000
+            ["RerollsWhenFragments"] = 200000
         }
     }
 }
