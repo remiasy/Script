@@ -5,7 +5,7 @@ getgenv().HorstConfig = {
     ["Whitescreen"] = false,
     ["EnableAddFriends"] = false,
     ["LockFps"] = {
-        ["EnableLockFps"] = true,
+        ["EnableLockFps"] = false,
         ["LockFpsAmount"] = 30 
     },
     ["AutoFunctions"] = {
