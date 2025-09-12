@@ -20,7 +20,7 @@ _G.MainSettings = {
 }
 _G.SharkAnchor_Settings = {
     ["Enabled_Farm"] = true,
-    ['FarmAfterMoney'] = 2500000
+    ['FarmAfterMoney'] = 50000000
 }
 _G.Quests_Settings = {        
     ['Rainbow_Haki'] = true,
