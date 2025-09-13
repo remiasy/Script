@@ -14,9 +14,9 @@ getgenv().Configs = {
     StrongholdFarmTime = 400, -- เวลาฟาร์มในสตรองโฮลด์
 
     -- คลาส ( Class )
-    BuyClass = {"None"}, -- ชื้อคลาส
+    BuyClass = {"Gambler", "None"}, -- ชื้อคลาส
     DoFirstTimeReroll = false, -- รีร้านคลาสครั้งแรกฟรี ถ้าไม่มีคลาสที่ต้องการขาย
-    AutoEquipClass = "", -- เลือกใส่ Class
+    AutoEquipClass = "Gambler", -- เลือกใส่ Class
     UpgradeClass = false, -- อัพเวลคลาสอัตโนมัติ (ไม่ได้ทำเควส แค่อัพเวลตอนมันพร้อมเท่านั้น)
 
     -- เพิ่มเติม ( Misc )
@@ -25,7 +25,7 @@ getgenv().Configs = {
 }
 getgenv().GoogleSheetLog = {
     -- Google Sheet
-    Enable = false, -- เปิดใช้ฟีเจอร์
+    Enable = true, -- เปิดใช้ฟีเจอร์
     WebAppURL = "https://script.google.com/macros/s/AKfycbxW_4f-sfF-R2I1O8Xy1EVFv9mDqZQIHNWWQ_kfVCaiOZkGfQuVLV6n_2kqs92KB-hk/exec" -- ใส่ URL ของ Google Apps Script ที่เชื่อมต่อกับ Google Sheets ของคุณ
 
 }
