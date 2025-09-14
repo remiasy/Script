@@ -1,3 +1,4 @@
+setfpscap(5)
 task.wait(5)
 getgenv().ConfigsKaitun = {
 	Beta_Fix_Data_Sync = true,
@@ -11,7 +12,7 @@ getgenv().ConfigsKaitun = {
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
 	
-	["Rejoin When Update"] = true,
+	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
 		["Limit"] = 250,
 		["Destroy Untill"] = 250,
@@ -499,7 +500,7 @@ getgenv().ConfigsKaitun = {
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
 		UrlSeed = "",
-		PcName = "RemiaBLABLABLA",
+		PcName = "Remiablablabla",
 		
 		Noti = {
 			Seeds = {
