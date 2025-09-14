@@ -18,4 +18,4 @@ getgenv().HorstConfig = {
         }
     }
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/HorstSpaceX/last_update/refs/heads/main/on_loaded.lua"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/CFcwrrX2"))()
