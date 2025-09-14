@@ -1,5 +1,3 @@
-setfpscap(5)
-task.wait(5)
 getgenv().ConfigsKaitun = {
 	Beta_Fix_Data_Sync = true,
 
@@ -7,16 +5,28 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 150,
+	Collect_Cooldown = 60, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
-	
-	["Rejoin When Update"] = false,
+	["Auto Rejoin"] = true,
+
+	["Rejoin When Update"] = true,
+
+	["Auto Trade Pet"] = { -- not done yet bro dont use
+		["Enabled"] = false, 
+		["Target"] =  { -- multi users
+			"username1",
+			"username2",
+		},
+		["Pet To Send"] = {
+			
+		}
+	},
+
 	["Limit Tree"] = {
 		["Limit"] = 250,
-		["Destroy Untill"] = 250,
-		
+		["Destroy Until"] = 250,
+
 		["Safe Tree"] = {
 			"Moon Blossom",
 			"Bone Blossom",
@@ -61,161 +71,9 @@ getgenv().ConfigsKaitun = {
 
 	Seed = {
 		Buy = {
-			Mode = "Custom", -- Custom , Auto
-			Custom = {
-				"Mushroom",
+			Mode = "Auto", -- Custom , Auto
+			Custom = { -- any seed u need to buy
 				"Carrot",
-                "Blueberry",
-                "Grape",
-                "Strawberry",
-                "Elder Strawberry",
-                "Wild Carrot",
-                "Taro Flower",
-                "Mandrake",
-                "Rhubarb",
-                "Onion",
-                "Tall Asparagus",
-                "Candy Sunflowers",
-                "Red Lollipop",
-                "Sugarglaze",
-                "Cherry Blossom",
-                "Crocus",
-                "Daffodil",
-                "Orange Tulip",
-                "Nightshade",
-                "Moonflower",
-                "Moon Blossom",
-                "Rose",
-                "Foxglove",
-                "Lilac",
-                "Pink Lily",
-                "Purple Dagila",
-                "Sunflower",
-                "Lavender",
-                "Honeysuckle",
-                "Manuka Flower",
-                "Ember Lily",
-                "Parasol Flower",
-                "Rosy Delight",
-                "Lily Of The Valley",
-                "Burning Bud",
-                "Rafflesia",
-                "Stonebite",
-                "Liberty Lily",
-                "Firework Flower",
-                "Serenity",
-                "Monoblooma",
-                "Soft Sunshine",
-                "Hinomai",
-                "Zenflare",
-                "Dezen",
-                "Artichoke",
-                "Veinpetal",
-                "Flare Daisy",
-                "Tranquil Bloom",
-                "Apple",
-                "Avocado",
-                "Banana",
-                "Coconut",
-                "Dragon Fruit",
-                "Durian",
-                "Mango",
-                "Pear",
-                "Pineapple",
-                "Watermelon",
-                "Starfruit",
-                "Blood Banana",
-                "Moon Melon",
-                "Moon Mango",
-                "Nectarine",
-                "Hive Fruit",
-                "Green Apple",
-                "Sugar Apple",
-                "Traveler's Fruit",
-                "Loquat",
-                "Kiwi",
-                "Maple Apple",
-                "Spiked Mango",
-                "Crown Melon",
-                "Grand Tomato",
-                "Pricklefruit",
-                "Mangosteen",
-                "Canary Melon",
-                "Pumpkin",
-                "Tomato",
-                "Cantaloupe",
-                "Cacao",
-                "Beanstalk",
-                "Mint",
-                "Moonglow",
-                "Elephant Ears",
-                "Cauliflower",
-                "Pitcher Plant",
-                "Firefly Fern",
-                "Giant Pinecone",
-                "Dragon Sapling",
-                "Sakura Bush",
-                "Princess Thorn",
-                "Romanesco",
-                "Nectar Thorn",
-                "Papaya",
-                "Cocovine",
-                "Pepper",
-                "Dragon Pepper",
-                "Bell Pepper",
-                "Jalapeno",
-                "Badlands Pepper",
-                "Feijoa",
-                "Duskpuff",
-                "Gleamroot",
-                "Amberheart",
-                "Cactus",
-                "Horned Dinoshroom",
-                "Twisted Tangle",
-                "Sinisterdrip",
-                "Amber Spine",
-                "Grand Volcania",
-                "Bamboo",
-                "Bendboo",
-                "Lotus",
-                "Lucky Bamboo",
-                "Spring Onion",
-                "Poseidon Plant",
-                "Delphinium",
-                "Guanabanana",
-                "Butternut Squash",
-                "Paradise Petal",
-                "Boneboo",
-                "Fossilight",
-                "Bone Blossom",
-                "Gorsetail",
-                "Lingonberry",
-                "Zen Rocks",
-                "Enkaku",
-                "Corn",
-				"Crown of Thorns",
-				"Calla Lily",
-				"Cyclamen",
-				"Sunbulb",
-				"Glowthorn",
-				"Lightshoot",
-				"Briar Rose",
-				"Spirit Flower",
-				"Wispwing",
-				"Emerald Bud",
-				"Pyracantha",
-				"Shroomie",
-				"Aetherfruit",
-				"Pixie Faern",
-				"Untold Bell",
-				"Turnip",
-				"Parsley",
-				"Meyer Lemon",
-				"Carnival Pumpkin",
-				"Kniphofia",
-				"Golden Peach",
-				"Maple Resin"
-
 			}
 		},
 		Place = {
@@ -224,108 +82,103 @@ getgenv().ConfigsKaitun = {
 				"Carrot"
 			},
 			Lock = {
-
+				"Maple Apple",
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Moon Melon",
+				"Easter Egg",
+				"Moon Mango",
+				"Bone Blossom",
+				"Fossilight",
 			}
 		}
 	},
-	
+
 	["Seed Pack"] = {
 		Locked = {
-			
+			["Enchanted Seed Packs"] = 10,
 		}
 	},
-	
-	Events = {
-		["Fall Event"] = {
-			Minimum_Money = 100_000, -- minimum money to start play this event
-		},
 
 	Events = {
+		["Fall Event"] = {
+			Minimum_Money = 10_000_000, -- minimum money to start play this event
+		},
 		["Fairy Event"] = {
-			Minimum_Money = 100_000, -- minimum money to start play this event
-			Rewards_Item = {
+			Minimum_Money = 10_000_000, -- minimum money to start play this event
+			Rewards_Item = { -- top mean select first
 				"Enchanted Seed Pack",
-				"FairyPoints",
+				"Pet Shard Glimmering",
 				"Enchanted Egg",
 				"Mutation Spray Glimmering",
+				"FairyPoints",
 				"Fairy Targeter",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
 				Order = { -- top upgrade first, not put mean not upgrade
-					"Glimmer Multiplier",
-					"Loose Fairy Spawn Amount",
 					"Fairy Spawn Amount",
+					"Loose Fairy Spawn Amount",
+					"Glimmer Multiplier",
 					"Fairy Event Duration",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 10, -- max 10
-					["Loose Fairy Spawn Amount"] = 6, -- max 12
-					["Fairy Spawn Amount"] = 6, -- max 9
-					["Fairy Event Duration"] = 0, -- max 10
+					["Glimmer Multiplier"] = 5, -- max 10
+					["Loose Fairy Spawn Amount"] = 10, -- max 10
+					["Fairy Event Duration"] = 10, -- max 10
+					["Fairy Spawn Amount"] = 9, -- max 9
 				}
 			},
-			Minimum_Fairy_Point_Restock = 15000, -- if fairy point more then this will restock
+			
+			Minimum_Fairy_Point_Restock = 10000, -- if fairy point more then this will restock
 			Catch_Fairy_Before_Restock = 51, -- fr it 50 but to be sure i put 51
 		},
-		MaxMoney_Restocks = 5_000_000_000,
-		Shop = { -- delete -- to buy
+		MaxMoney_Restocks = 10_000_000,
+		
+		Shop = { -- un comment to buy
 			"Fall Egg",
-			"Space Squirrel",
+
 			"Enchanted Chest",
-			--"Pet Shard Glimmering",
+			"Pet Shard Glimmering",
+			"Enchanted Egg",
 			"Enchanted Seed Pack",
-			"Luminous Sprite",
-			"Luminous Wand",
 			-- "Drake",
+			"Pixie Faern",
+			"Untold Bell",
+			"Luminous Sprite",
+			"Mutation Spray Luminous",
+			"Luminous Wand",
 
 			"Sprout Seed Pack",
 			"Sprout Egg",
 			-- "Mandrake",
-			--"Silver Fertilizer",
+			"Silver Fertilizer",
 			-- "Canary Melon",
 			-- "Amberheart",
-			--["Spriggan"] = 8,
+			["Spriggan"] = 8,
 			-- Friend Shop
 			"Skyroot Chest",
-			--"Pet Shard GiantBean",
+			"Pet Shard GiantBean",
 		},
 		["Traveling Shop"] = {
-            "Bee Egg",
-			"Paradise Egg",
-			"Common Summer Egg",
-			"Rare Summer Egg",
-			"Bald Eagle",
-            "Cauliflower",
-            "Rafflesia",
-            "Green Apple",
-            "Avocado",
-            "Banana",
-            "Pineapple",
-            "Kiwi",
-            "Bell Pepper",
-            "Prickly Pear",
-            "Loquat",
-            "Feijoa",
-            "Pitcher Plant",
-            "Flower Seed Pack"
-
+			"Bee Egg",
+			"Paradise Egg", 
+			"Rare Summer Egg", 
+			"Common Summer Egg"
 		},
 		Craft = {
 			"Enchanted Chest",
 			"Fairy Net",
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
-			"Sprout Egg",
 			"Anti Bee Egg",
-			"Primal Egg",
-			"Ancient Seed Pack",
-			--"Honeysuckle",
-			--"Lightning Rod",
+			"Pet Shard GiantBean",
+			"Sprout Egg",
 		},
-		Start_Do_Honey = 100_000
+		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
-	
+
 	Gear = {
 		Buy = { 
 			"Master Sprinkler",
@@ -333,170 +186,122 @@ getgenv().ConfigsKaitun = {
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
 			"Lightning Rod",
-			"Medium Toy",
-			"Medium Treat",
 			"Level Up Lollipop",
-			"LevelUp Lollipop",
-			"Tanning Mirror",
-			"Grandmaster Sprinkler",
+			"Medium Treat",
+			"Medium Toy",
 			"Harvest Tool",
 		},
 		Lock = {
-
+			"Master Sprinkler",
+			"Godly Sprinkler",
+			"Advanced Sprinkler",
+			"Basic Sprinkler",
+			"Lightning Rod",
 		},
 	},
 
 	Eggs = {
 		Place = {
 			"Fall Egg",
-			"Anti Bee Egg",
-			"Bug Egg",
-			"Paradise Egg",
 			"Enchanted Egg",
 			"Sprout Egg",
 			"Gourmet Egg",
-			--"Zen Egg",
-			--"Primal Egg",
-			--"Night Egg",
-			--"Dinosaur Egg",
-			--"Oasis Egg",
-			"Mythical Egg",
-			"Legendary Egg",
-			"Rare Summer Egg",
-			"Common Summer Egg",
-			"Rare Egg",
-			"Uncommon Egg",
-		},
-		Buy = {
-			"Fall Egg",
-			"Enchanted Egg",
-			"Sprout Egg",
-			--"Gourmet Egg",
-			--"Zen Egg",
-			--"Primal Egg",
-			--"Night Egg",
-			"Bug Egg",
+			"Zen Egg",
+			"Primal Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
 			"Anti Bee Egg",
-			--"Dinosaur Egg",
-			--"Oasis Egg",
+			"Night Egg",
+			"Bug Egg",
 			"Paradise Egg",
-			"Mythical Egg",
-			"Legendary Egg",
 			"Bee Egg",
 			"Rare Summer Egg",
-			"Common Summer Egg",
-			"Rare Egg",
+			"Mythical Egg",
+			"Common Egg",
+		},
+		Buy = {
+			"Bee Egg",
+			"Oasis Egg",
+			"Paradise Egg",
+			"Anti Bee Egg",
+			"Night Egg",
+			"Rare Summer Egg",
+			"Bug Egg",
+			"Mythical Egg",
 			"Uncommon Egg",
 			"Common Egg",
 		}
 	},
-	
+
 	Pets = {
 		["Auto Feed"] = true,
+
+		MutationPet = {
+			["PET NAME"] = { "Glimmering","... any other" }
+		},
 
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Little Auto Equip"] = true, -- when it no target pet in list it will equip random/smart before real list have pet
 			["Pet"] = {
-				--["Bacon Pig"] = { 8, 75, 1 },
-				["Glimmering Sprite"] = { 8, 101, 1 },
-				["Starfish"] = { 8, 75, 2 },
-				["Chicken"] = { 8 , 75, 3 },
-				["Rooster"] = { 8, 75, 3 },
+				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
-			["Limit Upgrade"] = 5,
+			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 8, 101, 1 },
-				["Tarantula Hawk"] = { 2, 101, 2 },
-				--["Gorilla Chef"] = { 8, 101, 1 },
-				--["Bacon Pig"] = { 8, 101, 2 },
-				--["Tanchozuru"] = { 8, 101, 3 },
-				--["Kappa"] = { 8, 101, 4 },
-				--["Spaghetti Sloth"] = { 8, 101, 5 },
-				--["Corrupted Kodama"] = { 8, 101, 6 },
-				--["Kodama"] = { 8, 101, 7 },
-				["Blood Kiwi"] = { 8, 101, 3 },
-				["Rooster"] = { 8, 101, 4 },
-				["Sunny-Side Chicken"] = { 1, 101, 5 },
-				["Chicken"] = { 8 , 101, 6 },
-				["Starfish"] = { 8, 75, 7 },
+				["Glimmering Sprite"] = {8, 100, 1},
+				["Tanchozuru"] = { 5, 100, 2 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
+				["Ostrich"] = { 3, 100, 2 },
+				["Blood Kiwi"] = { 8, 100 },
+				["Seal"] = { 8, 100 },
+				["Rooster"] = { 8, 100 },
+				["Starfish"] = { 5, 75 },
 			},
 		},
 		Unfavorite_AllPet = false,
 		Favorite_LockedPet = true,
+		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			"Swan",
+			"Phoenix",
+			"Cockatrice",
+			"Griffin",
+			"Golden Goose",
+			"Golem",
+			"French Fry Ferret",
+			"Spaghetti Sloth",
+			"Corrupted Kitsune",
+			"Raiju",
+			"Koi",
+			"Tanuki",
+			"Tanchozuru",
+			"Kappa",
+			"Kitsune",
+			"Dilophosaurus",
+			"Moon Cat",
+			"Capybara",
+			"Spinosaurus",
+			"Bear Bee",
+			"T-Rex",
+			"Brontosaurus",
 			"Disco Bee",
 			"Butterfly",
-			"Mimic Octopus",
 			"Queen Bee",
 			"Dragonfly",
 			"Raccoon",
-			"Red Fox",
 			"Fennec Fox",
-			"Bald Eagle",
-			"T-Rex",
-			"Brontosaurus",
-			"Spinosaurus",
-			"Kitsune",
-			"Dilophosaurus",
-			"Corrupted Kitsune",
-			"Raiju",
-			"French Fry Ferret",
-			"Lobster Thermidor",
-			"Golden Goose",
-			"Griffin",
-			"Cockatrice",
-			"Phoenix",
-			"Swan",
-			"Space Squirrel",
-			["Glimmering Sprite"] = 8,
-			["Sunny-Side Chicken"] = 1,
-			["Tarantula Hawk"] = 2,
-			["Bald Eagle"] = 5,
-			["Moon Cat"] = 10,
-			["Chicken"] = 8,
-			["Rooster"] = 2,
-			["Blood Kiwi"] = 5,
-			["Starfish"] = 8,
+			"Mimic Octopus",
+			"Red Fox",
+			"Blood Owl",
+			["Starfish"] = 10,
 		},
-		LockPet_Weight = 5, -- if Weight >= 7 they will locked,
+		LockPet_Weight = 5, -- if Weight >= 10 they will locked
+		Ignore_Pet_Weight = {
+			"NAME oF PET THAT U DONT NEED LOCK",
+		},
 		Instant_Sell = {
-			"Grey Mouse",
-			"Squirrel",
-			"Snail",
-			"Orangutan",
-			"Brown Mouse",
-			"Bunny",
-			"Crab",
-			"Caterpillar",
-			"Shiba Inu",
-			"Tanuki",
-			"Manaki-Neko",
-			"Seagull",
-			"Bagel Bunny",
-			"Bacon Pig",
-			"Dairy Cow",
-			"Pancake Mole",
-			"Hotdog Daschund",
-			"Gorilla Chef",
-			"Seedling",
-			"Sushi Bear",
-			"Jackalope",
-			"Black Bunny",
-			"Deer",
-			"Spotted Deer",
-			"Pig",
-			"Elk",
-			"Monkey",
-			"Mandrake",
-			"Silver Monkey",
-			"Sea Otter",
-			"Imp",
-			"Ladybug",
-			"Cow",
+			"NAME oF SOMETHING",
 		}
 	},
-
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1399732832762331177/PVr6gW2RG2Gokz2CQEtZuJ_BplaBiIZmd8hzTj1Q8FkdoBdCjGo62NuKW0_6puoYpZLS",
 		UrlSeed = "",
