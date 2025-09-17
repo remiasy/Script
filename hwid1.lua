@@ -137,6 +137,41 @@ end
 -- ========================================================================================
 function Api_Script()
 print("Api");
+repeat task.wait() until game:IsLoaded()
+
+getgenv().HorstConfig = {
+    ["EnableLog"] = true, -- ปรับเป็น true ถ้าอยากให้มันเช็คของ BF / GAG
+    ["Whitescreen"] = false,
+    ["EnableAddFriends"] = true, -- แอดเพื่อนให้เอง ทุกๆ 1นาที
+    ["LockFps"] = {
+        ["EnableLockFps"] = false,
+        ["LockFpsAmount"] = 30 
+    },
+    ["AutoFunctions"] = {
+        ["Enable"] = false, -- ออโต้เปลี่ยนไอดี สำคัญ !!
+        ["BF"] = { 
+            ["MAIN"] = {
+                ["Level"] = 2750,
+                ["Fragments"] = 30000, -- ถ้าต่ำกว่านี้จะไม่เปลี่ยนไอดีให้ until >=
+                ["Full_Mastery_DF"] = false,
+                ["Full_Awake_DF"] = false,
+                ["Lever"] = false,
+                ["Lock_Race"] = {
+                    ["Enable"] = false,
+                    ["Race"] = "Cyborg", -- ["Cyborg", "Ghoul", "Mink", "Fishman", "Skypiea", "Draco"]
+                    ["Ability"] = "V3",
+                    ["Tier"] = 10 -- ยังไม่ให้ใช้ เอามาประดับบารมีเฉยๆ
+                }
+            },
+            ["GOD"] = true,
+            ["GOD_CDK"] = false,
+            ["GOD_SA"] = false, 
+            ["GOD_MIR_VAL"] = false, 
+            ["GOD_CDK_MIR_VAL"] = false 
+        }
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HorstSpaceX/last_update/refs/heads/main/on_loaded.lua"))()
 end
 -- ========================================================================================
 Log_script()
