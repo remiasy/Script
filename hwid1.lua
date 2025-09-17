@@ -1,4 +1,3 @@
-repeat task.wait() until game:IsLoaded()
 -- ========================================================================================
 function Farm_Script()
 print("Farm");
@@ -174,6 +173,22 @@ getgenv().HorstConfig = {
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HorstSpaceX/last_update/refs/heads/main/on_loaded.lua"))()
 end
 -- ========================================================================================
-Log_script()
-Farm_Script()
-Api_Script()
+repeat task.wait() until game:IsLoaded()
+
+local function safe_spawn(fn, name)
+    task.spawn(function()
+        local ok, err = pcall(fn)
+        if not ok then warn((name or "task").." error: "..tostring(err)) end
+    end)
+end
+
+-- ===== ฟังก์ชันตามเดิมของคุณ (ไม่ต้องแก้) =====
+-- Log_script(), Farm_Script(), Api_Script()
+-- ============================================
+
+-- ทางเลือก A: สตาร์ตแบบขนาน
+safe_spawn(Log_script, "Log_script")
+task.wait(0.1)
+safe_spawn(Api_Script, "Api_Script")   -- ให้ API ขึ้นก่อน
+task.wait(0.1)
+safe_spawn(Farm_Script, "Farm_Script") -- ฟาร์มค่อยขึ้นท้ายสุด
