@@ -102,13 +102,9 @@ _G.Hop_Settings = {
     ["Find Tushita"] = false
 }
 -- Script Here !!!
---(getgenv()).key = "MARUY2EYXI1O95DFSF8K5LVEFR";
---(getgenv()).id = "895247128409038888";
---loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruComkak/main/PCBit.lua"))()
-getgenv().Key = "MARU-4UZWY-BEON-Y6CAI-2DCZ-FZOUE"
-getgenv().id = "895247128409038888"
-getgenv().Script_Mode = "Kaitun_Script"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
+(getgenv()).key = "MARUY2EYXI1O95DFSF8K5LVEFR";
+(getgenv()).id = "895247128409038888";
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruComkak/main/PCBit.lua"))()
 end
 -- ========================================================================================
 function Log_script()
