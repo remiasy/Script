@@ -1,4 +1,5 @@
 -- ========================================================================================
+setfpscap(15)
 function Farm_Script()
 print("Farm");
 repeat task.wait() until game:IsLoaded()
