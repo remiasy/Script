@@ -144,8 +144,8 @@ getgenv().HorstConfig = {
     ["Whitescreen"] = false,
     ["EnableAddFriends"] = true, -- แอดเพื่อนให้เอง ทุกๆ 1นาที
     ["LockFps"] = {
-        ["EnableLockFps"] = false,
-        ["LockFpsAmount"] = 30 
+        ["EnableLockFps"] = true,
+        ["LockFpsAmount"] = 15 
     },
     ["AutoFunctions"] = {
         ["Enable"] = false, -- ออโต้เปลี่ยนไอดี สำคัญ !!
