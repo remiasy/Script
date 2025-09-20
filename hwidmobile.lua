@@ -6,7 +6,7 @@ task.spawn(function()
     print("Setfpscap : Done (initial)")
 
     -- จากนั้นค่อยวนทุก 5 นาที
-    while task.wait(60) do
+    while task.wait(300) do
         setfpscap(10)
         print("Setfpscap : Done (loop)")
     end
@@ -490,6 +490,34 @@ UserInputService.InputBegan:Connect(function(input,gp)
 end)
 end
 -- ========================================================================================
+function delta_Fix()
+local errorMSG = { -- ปิด Roblox Client เมื่อเจอ error
+    "you were kicked", "disconnected", "lost connection", "267", "279",
+}
+
+task.spawn(function()
+    while task.wait(1) do
+        local promptGui = game.CoreGui:FindFirstChild("RobloxPromptGui")
+        if promptGui then
+            for _, v in ipairs(promptGui:GetDescendants()) do
+                if v:IsA("TextLabel") and v.Text and v.Text ~= "" then
+                    local txt = string.lower(v.Text)
+                    for _, msg in ipairs(errorMSG) do
+                        if string.find(txt, msg, 1, true) then
+                            pcall(function()
+                                game:Shutdown() -- ปิด Roblox Client ทันที
+                            end)
+                            return
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+
+end
+-- ========================================================================================
 
 
 repeat task.wait() until game:IsLoaded()
@@ -515,3 +543,5 @@ task.wait(0.1)
 safe_spawn(Autochat_Script, "Autochat_Script")
 task.wait(0.1)
 safe_spawn(Fps_Script, "Fps_Script")
+task.wait(0.1)
+safe_spawn(delta_Fix, "delta_Fix")
