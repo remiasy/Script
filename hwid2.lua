@@ -1,5 +1,18 @@
 repeat task.wait() until game:IsLoaded()
 -- ========================================================================================
+task.spawn(function()
+    -- เรียกครั้งแรกทันที
+    setfpscap(10)
+    print("Setfpscap : Done (initial)")
+
+    -- จากนั้นค่อยวนทุก 5 นาที
+    while task.wait(300) do
+        setfpscap(10)
+        print("Setfpscap : Done (loop)")
+    end
+end)
+
+
 function Farm_Script()
 print("Farm");
 local Keys = loadstring(game:HttpGet("https://raw.githubusercontent.com/remiasy/Script/refs/heads/main/banana.txt"))()
@@ -122,7 +135,7 @@ getgenv().HorstConfig = {
     ["Whitescreen"] = false,
     ["EnableAddFriends"] = true, -- แอดเพื่อนให้เอง ทุกๆ 1นาที
     ["LockFps"] = {
-        ["EnableLockFps"] = true,
+        ["EnableLockFps"] = false,
         ["LockFpsAmount"] = 10 
     },
     ["AutoFunctions"] = {
