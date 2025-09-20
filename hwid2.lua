@@ -6,7 +6,7 @@ task.spawn(function()
     print("Setfpscap : Done (initial)")
 
     -- จากนั้นค่อยวนทุก 5 นาที
-    while task.wait(300) do
+    while task.wait(60) do
         setfpscap(10)
         print("Setfpscap : Done (loop)")
     end
