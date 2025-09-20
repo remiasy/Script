@@ -1,7 +1,7 @@
 return {
     R1 = "6b2e8a20378ffd10ba9c70e2",
-    R2 = "6b2e8a20378ffd10ba9c70e3",
-    R3 = "6b2e8a20378ffd10ba9c70e4",
+    R2 = "6b2e8a20378ffd10ba9c70e2",
+    R3 = "6b2e8a20378ffd10ba9c70e2",
     R4 = "73112599b2053a59177279a4",
     R5 = "b1f2cc920f7c84b9216cf948",
     R6 = "692dc0d0eff33014dbf5110b",
