@@ -1,0 +1,4 @@
+return {
+    R1 = "6b2e8a20378ffd10ba9c70e2",
+    R2 = "87a37723e7635bbeda1a7948"
+}
