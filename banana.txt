@@ -1,4 +1,38 @@
 return {
     R1 = "6b2e8a20378ffd10ba9c70e2",
-    R2 = "87a37723e7635bbeda1a7948"
+    R2 = "6b2e8a20378ffd10ba9c70e3",
+    R3 = "6b2e8a20378ffd10ba9c70e4",
+    R4 = "73112599b2053a59177279a4",
+    R5 = "b1f2cc920f7c84b9216cf948",
+    R6 = "692dc0d0eff33014dbf5110b",
+    R7 = "f5191a8035389d7ac12197da",
+    R8 = "08f10a4c3160e093f3070426",
+
+    X1 = "aa022e759b81ee0ef5d88db9",
+    X2 = "05113b2d619e7b5a33b15e69",
+    X3 = "f120625fc5dbd875d2a1f064",
+    X4 = "305318763dd7fc0d87635468",
+    X5 = "7a2820d2b6daf9a708f66fa9",
+    X6 = "daee463cce55d2b0fd200477",
+    X7 = "4fa245fb242837abc121b551",
+    X8 = "82f506e9fe568e4273c6bef8",
+    X9 = "74ca30166d175e4b2e3c17ed",
+
+    Y1  = "dbca54775ac6b1e0f3bf44e4",
+    Y2  = "41e046e72484b0f7d2c7aa60",
+    Y3  = "57c79f3575b2b208005a1d1c",
+    Y4  = "1dd9b70c5836832ea6d36049",
+    Y5  = "98eed4f3472c17bedb21687d",
+    Y6  = "62d2dbf0ee83e9ea5bc3acd5",
+    Y7  = "d869e4c81b0981bc5bb1ddc0",
+    Y8  = "c8c0880ae4249d191bcc69e1",
+    Y9  = "34e36a2561fd91c2f90e4215",
+    Y10 = "68c67e8876c95c0e3dbc6883",
+
+    Z1 = "2858210d03ec9661a1f0fe82",
+    Z2 = "1a150b3b3cd88641ed4ac1ce",
+    Z3 = "87a37723e7635bbeda1a7948",
+    Z4 = "e03011d8fbe69c1464c6f318",
+    
+    Main = "ee8821b6dd13d66ce107989d", -- 222wae discord
 }
