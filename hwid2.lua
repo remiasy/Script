@@ -49,7 +49,7 @@ print("This PC is:", _G.PC or "Not Set")
             ["Cursed Dual Katana"] = true,
             ["Upgrade Race V2-V3"] = true,
             ["Auto Pull Lever"] = true,
-            ["Shark Anchor"] = true, --- if have cdk,sg,godhuman
+            ["Shark Anchor"] = false, --- if have cdk,sg,godhuman
         },
         ["Get Rare Items"] = {
             ["Rengoku"] = false,
