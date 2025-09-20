@@ -5,6 +5,7 @@ print("Farm");
 local Keys = loadstring(game:HttpGet("https://raw.githubusercontent.com/remiasy/Script/refs/heads/main/banana.txt"))()
 getgenv().Key = Keys[_G.PC]
 print("Key Loaded:", getgenv().Key or "Key not found for "..tostring(_G.PC))
+print("This PC is:", _G.PC or "Not Set")
     getgenv().SettingFarm ={
         ["Hide UI"] = false,
         ["Reset Teleport"] = {
