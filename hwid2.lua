@@ -133,7 +133,7 @@ repeat task.wait() until game:IsLoaded()
 getgenv().HorstConfig = {
     ["EnableLog"] = true, -- ปรับเป็น true ถ้าอยากให้มันเช็คของ BF / GAG
     ["Whitescreen"] = false,
-    ["EnableAddFriends"] = true, -- แอดเพื่อนให้เอง ทุกๆ 1นาที
+    ["EnableAddFriends"] = false, -- แอดเพื่อนให้เอง ทุกๆ 1นาที
     ["LockFps"] = {
         ["EnableLockFps"] = false,
         ["LockFpsAmount"] = 10 
