@@ -490,6 +490,114 @@ UserInputService.InputBegan:Connect(function(input,gp)
 end)
 end
 -- ========================================================================================
+function FarmMaru_Script()
+repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game.Players
+repeat task.wait() until game.Players.LocalPlayer
+repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+_G.Team = "Pirate" -- Marine / Pirate
+getgenv().Script_Mode = "Kaitun_Script"
+_G.MainSettings = {
+    ["EnabledHOP"] = true,
+    ['FPSBOOST'] = true,
+    ["FPSLOCKAMOUNT"] = 60,
+    ['WhiteScreen'] = true,
+    ['CloseUI'] = false,
+    ["NotifycationExPRemove"] = true,
+    ['AFKCheck'] = 150,
+    ["LockFragments"] = 200000,
+    ["LockFruitsRaid"] = {
+        [1] = "T-Rex-T-Rex",
+        [2] = "Dough-Dough",            
+        [3] = "Dragon-Dragon",            
+        [4] = "Kitsune-Kitsune",
+        [5] = "Mammoth-Mammoth",
+        [6] = "Leopard-Leopard",   
+        [7] = "Yeti-Yeti",   
+    }
+}
+_G.SharkAnchor_Settings = {
+    ["Enabled_Farm"] = false,
+    ['FarmAfterMoney'] = 2500000
+}
+_G.Quests_Settings = {        
+    ['Rainbow_Haki'] = true,
+    ["MusketeerHat"] = true,
+    ["PullLever"] = true,
+    ['DoughQuests_Mirror'] = {
+        ['Enabled'] = true,
+        ['UseFruits'] = true
+    }        
+}
+_G.Races_Settings = {
+    ['Race'] = {
+        ['EnabledEvo'] = true,
+        ["v2"] = true,
+        ["v3"] = true,
+        ["Races_Lock"] = {
+            ["Races"] = {
+                ["Mink"] = true,
+                ["Human"] = true,
+                ["Fishman"] = true
+            },
+            ["RerollsWhenFragments"] = 200000
+        }
+    }
+}
+_G.Fruits_Settings = {
+    ['Main_Fruits'] = {'Dough-Dough'},
+    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Quake-Quake", "Light-Light", "Dark-Dark", "Spider-Spider", "Rumble-Rumble", "Magma-Magma", "Buddha-Buddha"}
+}
+_G.Settings_Melee = {
+    ['Superhuman'] = true,
+    ['DeathStep'] = true,
+    ['SharkmanKarate'] = true,
+    ['ElectricClaw'] = true,
+    ['DragonTalon'] = true,
+    ['Godhuman'] = true
+}
+_G.SwordSettings = {
+    ['Saber'] = true,
+    ["Pole"] = false,
+    ['MidnightBlade'] = false,
+    ['Shisui'] = true,
+    ['Saddi'] = true,
+    ['Wando'] = false,
+    ['Yama'] = true,
+    ['Rengoku'] = false,
+    ['Canvander'] = false,
+    ['BuddySword'] = false,
+    ['TwinHooks'] = false,
+    ['HallowScryte'] = false,
+    ['TrueTripleKatana'] = false,
+    ['CursedDualKatana'] = true
+}
+_G.GunSettings = {
+    ['Kabucha'] = false,
+    ['SerpentBow'] = false,
+    ['SoulGuitar'] = false
+}
+_G.FarmMastery_Settings = {
+    ['Melee'] = true,
+    ['Sword'] = true,
+    ['DevilFruits'] = true,
+    ['Select_Swords'] = {
+        ["AutoSettings"] = true,
+        ["ManualSettings"] = {
+            "Saber",
+            "Buddy Sword"
+        }
+    }
+}
+_G.Hop_Settings = {
+    ["Find Tushita"] = false
+}
+-- Script Here !!!
+(getgenv()).key = "MARUCW6QPM5LGPMIZ51LW7Y1Y3";
+(getgenv()).id = "895247128409038888";
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruComkak/main/PCBit.lua"))()
+end
+-- ========================================================================================
 
 
 repeat task.wait() until game:IsLoaded()
@@ -510,8 +618,11 @@ safe_spawn(Log_script, "Log_script")
 task.wait(0.1)
 safe_spawn(Api_Script, "Api_Script")   -- ให้ API ขึ้นก่อน
 task.wait(0.1)
-safe_spawn(Farm_Script, "Farm_Script") -- ฟาร์มค่อยขึ้นท้ายสุด
-task.wait(0.1)
+-- safe_spawn(Farm_Script, "Farm_Script") -- Banana
+-- task.wait(0.1) -- Banana
+safe_spawn(Farm_Script, "FarmMaru_Script") -- Maru
+task.wait(0.1) -- Maru
 safe_spawn(Autochat_Script, "Autochat_Script")
 task.wait(0.1)
 safe_spawn(Fps_Script, "Fps_Script")
+
