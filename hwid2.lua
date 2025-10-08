@@ -631,7 +631,7 @@ if not waitDataReady(90) then
 end
 
 -- ===== Main check (debounced, one-shot) =====
-local TARGET = 2801
+local TARGET = 700
 local CHECK_INTERVAL = 20 -- วินาที
 
 local function checkAndMaybeDone()
@@ -698,7 +698,7 @@ task.wait(0.1) -- Banana
 --task.wait(0.1) -- Maru
 safe_spawn(Autochat_Script, "Autochat_Script")
 task.wait(0.1)
---safe_spawn(Private_Server_Bloxfruit, "Private_Server_Bloxfruit")
+safe_spawn(Private_Server_Bloxfruit, "Private_Server_Bloxfruit")
 task.wait(0.1)
 safe_spawn(Check_level_horst, "Check_level_horst")
 task.wait(0.1) -- Banana
