@@ -632,7 +632,7 @@ if not waitDataReady(90) then
 end
 
 -- ===== Main check (debounced, one-shot) =====
-local TARGET = 700
+local TARGET = 1000
 local CHECK_INTERVAL = 20 -- วินาที
 
 local function checkAndMaybeDone()
