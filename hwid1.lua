@@ -65,7 +65,7 @@ print("This PC is:", _G.PC or "Not Set")
             ["Enabled"] = true,
             ["Text"] = "ไก่ตัน สุดคุ้ม pangpream . rdcw . xyz",
         },
-        ["Auto Summon Rip Indra"] = false, --- auto buy haki and craft haki legendary 
+        ["Auto Summon Rip Indra"] = true, --- auto buy haki and craft haki legendary 
         ["Select Hop"] = { -- 70% will have it
             ["Hop Server If Have Player Near"] = false, 
             ["Hop Find Rip Indra Get Valkyrie Helm or Get Tushita"] = false, 
