@@ -36,7 +36,7 @@ return {
     Z5 = "3ce03ed77de31dd8d9416801", -- 222wae discord
     Z6 = "9578192640ca58473d597b17", -- 222wae discord
     Z7 = "a5042bd562b8f9c1c34f0ca7", -- 222wae discord
-    Z8 = "f571d17436cbfbafb8131707", -- 222wae discord
+    Z8 = "f571d17436cbffabf8131707", -- 222wae discord
     Z9 = "8d50f6fb80a25f10f4c253c1", -- 222wae discord
     Z10 = "abb4c6b407289d19250702d2", -- 222wae discord
     
