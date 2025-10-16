@@ -47,7 +47,7 @@ print("This PC is:", _G.PC or "Not Set")
             ["Valkyrie Helm"] = true,
             ["Mirror Fractal"] = true,
             ["Cursed Dual Katana"] = true,
-            ["Upgrade Race V2-V3"] = true,
+            ["Upgrade Race V2-V3"] = false,
             ["Auto Pull Lever"] = true,
             ["Shark Anchor"] = false, --- if have cdk,sg,godhuman
         },
