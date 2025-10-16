@@ -74,7 +74,7 @@ print("This PC is:", _G.PC or "Not Set")
             ["Hop Find Cake Queen [CDK]"] = false,
             ["Hop Find Soul Reaper [CDK]"] = false,
             ["Hop Find Darkbeard [SG]"] = false,
-            ["Hop Find Mirage [ Pull Lever ]"] = true,
+            ["Hop Find Mirage [ Pull Lever ]"] = false,
         },
         ["Farm Mastery"] = {
             ["Melee"] = true,
