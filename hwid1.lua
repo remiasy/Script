@@ -698,8 +698,8 @@ safe_spawn(FarmMaru_Script, "FarmMaru_Script") -- Maru
 task.wait(0.1) -- Maru
 --safe_spawn(Autochat_Script, "Autochat_Script")
 --task.wait(0.1)
-safe_spawn(Private_Server_Bloxfruit, "Private_Server_Bloxfruit")
-task.wait(0.1)
+--safe_spawn(Private_Server_Bloxfruit, "Private_Server_Bloxfruit")
+--task.wait(0.1)
 --safe_spawn(Check_level_horst, "Check_level_horst")
 --task.wait(0.1)
 
