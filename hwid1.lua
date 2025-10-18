@@ -672,6 +672,43 @@ function Private_Server_Bloxfruit()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/remiasy/Script/refs/heads/main/Private_server_bf"))()
 end
 -- ========================================================================================
+function QuartyZ_Script()
+getgenv().Mode = "OneClick"
+getgenv().Setting = {
+    ["Team"] = "Pirates", -- Options "Pirates", "Marines"
+    ["FucusOnLevel"] = true,
+    ["Fruits"] = {  -- setting for fruits u want
+        ["Primary"] = { -- if current fruit is not in this list, eat/buy
+            "",
+            -- u can configs add mores/remove and must end with , (comma symbol)
+        },
+        ["Normal"] = { -- it just a normal fruit list
+            "Ice-Ice", 
+			"Light-Light",
+			"Dark-Dark",
+			"Magma-Magma",
+			"Buddha-Buddha"
+            -- u can configs add mores/remove and must end with , (comma symbol)
+        }
+        -- run this for get all fruit name `local t={};for _,v in pairs(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("GetFruits"))do table.insert(t,v.Name)end;setclipboard(table.concat(t, "\n"))`
+    },
+    ["Lock Fruits"] = { -- don't use or eat fruits in this list
+    "Yeti-Yeti",
+    "Dough-Dough",
+	"Kitsune-Kitsune",
+	"Leopard-Leopard",
+	"Dragon-Dragon",
+	"Mammoth-Mammoth",
+	"Gas-Gas",
+    "T-Rex-T-Rex"
+    },
+    ["IdleCheck"] = 300, -- every (x) seconds if not moving rejoin
+};
+
+getgenv().product_key = "remia___"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/Loader.lua"))()
+end
+-- ========================================================================================
 
 
 repeat task.wait() until game:IsLoaded()
@@ -694,12 +731,13 @@ safe_spawn(Api_Script, "Api_Script")   -- ให้ API ขึ้นก่อน
 task.wait(0.1)
 --safe_spawn(Farm_Script, "Farm_Script") -- Banana
 --task.wait(0.1) -- Banana
-safe_spawn(FarmMaru_Script, "FarmMaru_Script") -- Maru
-task.wait(0.1) -- Maru
+--safe_spawn(FarmMaru_Script, "FarmMaru_Script") -- Maru
+--task.wait(0.1) -- Maru
 --safe_spawn(Autochat_Script, "Autochat_Script")
 --task.wait(0.1)
 --safe_spawn(Private_Server_Bloxfruit, "Private_Server_Bloxfruit")
 --task.wait(0.1)
 --safe_spawn(Check_level_horst, "Check_level_horst")
 --task.wait(0.1)
-
+safe_spawn(QuartyZ_Script, "QuartyZ_Script") -- QuartyZ
+task.wait(0.1) -- QuartyZ
