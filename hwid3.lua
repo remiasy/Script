@@ -512,7 +512,7 @@ _G.MainSettings = {
         [3] = "Dragon-Dragon",            
         [4] = "Kitsune-Kitsune",
         [5] = "Mammoth-Mammoth",
-        [6] = "Leopard-Leopard",   
+        [6] = "Tiger-Tiger",   
         [7] = "Yeti-Yeti",   
     }
 }
@@ -696,7 +696,7 @@ getgenv().Setting = {
     "Yeti-Yeti",
     "Dough-Dough",
 	"Kitsune-Kitsune",
-	"Leopard-Leopard",
+	"Tiger-Tiger",
 	"Dragon-Dragon",
 	"Mammoth-Mammoth",
 	"Gas-Gas",
