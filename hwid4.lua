@@ -129,6 +129,7 @@ end
 function Api_Script()
 print("Api");
 repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game.Players.LocalPlayer.Team ~= nil
 getgenv().HorstConfig = {
     ["EnableLog"] = true, -- ปรับเป็น true ถ้าอยากให้มันเช็คของ BF / GAG
     ["Whitescreen"] = false,
