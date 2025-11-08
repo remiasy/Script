@@ -706,7 +706,7 @@ getgenv().Setting = {
     ["IdleCheck"] = 300, -- every (x) seconds if not moving rejoin
 };
 
-getgenv().product_key = "remia___"
+getgenv().product_key = "remia"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/Loader.lua"))()
 end
 -- ========================================================================================
