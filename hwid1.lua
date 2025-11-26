@@ -703,7 +703,7 @@ getgenv().user_key = 'remia'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/OneClick/BF.lua"))()
 end
 -- ========================================================================================
-function AuraQueue()
+function QuartyZ_Script()
 task.spawn(function()
 	repeat
 		task.wait()
@@ -791,6 +791,7 @@ task.spawn(function()
 		end
 	end)
 end)
+
 end
 
 repeat task.wait() until game:IsLoaded()
@@ -801,6 +802,7 @@ local function safe_spawn(fn, name)
         if not ok then warn((name or "task").." error: "..tostring(err)) end
     end)
 end
+
 -- ===== ฟังก์ชันตามเดิมของคุณ (ไม่ต้องแก้) =====
 -- Log_script(), Farm_Script(), Api_Script() , Autochat_Script() , Fps_Script()
 -- ============================================
@@ -810,7 +812,7 @@ safe_spawn(Log_script, "Log_script")
 task.wait(0.1)
 safe_spawn(Api_Script, "Api_Script")   -- ให้ API ขึ้นก่อน
 task.wait(0.1)
-safe_spawn(Api_Script, "AuraQueue")
+safe_spawn(Api_Script, "AuraQueue")   -- ให้ API ขึ้นก่อน
 task.wait(0.1)
 --safe_spawn(Farm_Script, "Farm_Script") -- Banana
 --task.wait(0.1) -- Banana
@@ -823,4 +825,3 @@ task.wait(0.1)
 --safe_spawn(Check_level_horst, "Check_level_horst")
 --task.wait(0.1)
 safe_spawn(QuartyZ_Script, "QuartyZ_Script") -- QuartyZ
-task.wait(0.1) -- QuartyZ
