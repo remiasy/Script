@@ -703,7 +703,7 @@ getgenv().user_key = 'remia'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/OneClick/BF.lua"))()
 end
 -- ========================================================================================
-function QuartyZ_Script()
+function AuraQueue()
 task.spawn(function()
 	repeat
 		task.wait()
