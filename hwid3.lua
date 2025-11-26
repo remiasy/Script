@@ -705,6 +705,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScrip
 end
 -- ========================================================================================
 function AuraQueue()
+print("AuraQueue");
 task.spawn(function()
 	repeat
 		task.wait()
@@ -813,7 +814,7 @@ safe_spawn(Log_script, "Log_script")
 task.wait(0.1)
 safe_spawn(Api_Script, "Api_Script")   -- ให้ API ขึ้นก่อน
 task.wait(0.1)
-safe_spawn(Api_Script, "AuraQueue")   -- ให้ API ขึ้นก่อน
+safe_spawn(AuraQueue, "AuraQueue")   -- ให้ API ขึ้นก่อน
 task.wait(0.1)
 --safe_spawn(Farm_Script, "Farm_Script") -- Banana
 --task.wait(0.1) -- Banana
