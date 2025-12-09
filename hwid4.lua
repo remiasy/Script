@@ -753,4 +753,4 @@ task.wait(0.1) -- Maru
 --task.wait(0.1)
 --safe_spawn(Check_level_horst, "Check_level_horst")
 --task.wait(0.1)
-safe_spawn(QuartyZ_Script, "QuartyZ_Script") -- QuartyZ
+--safe_spawn(QuartyZ_Script, "QuartyZ_Script") -- QuartyZ
