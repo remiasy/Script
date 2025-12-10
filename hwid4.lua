@@ -43,7 +43,7 @@ print("This PC is:", _G.PC or "Not Set")
         ["Get Items"] = {
             ["Saber"] = true,
             ["Godhuman"] =  true,
-            ["Skull Guitar"] = false,
+            ["Skull Guitar"] = true,
             ["Valkyrie Helm"] = true,
             ["Mirror Fractal"] = true,
             ["Cursed Dual Katana"] = true,
