@@ -518,7 +518,7 @@ _G.OneClickSettings = {
     ["FragmentsCap"] = 100000,
     ["Upgrade Race"] = true,
     ["Pull Lever"] = true,
-    ["Farm Shark Anchor"] = true
+    ["Farm Shark Anchor"] = false
 }
 -- Script Here !!!
 (getgenv()).key = "MARUY2EYXI1O95DFSF8K5LVEFR";
