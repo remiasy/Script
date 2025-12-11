@@ -743,8 +743,8 @@ safe_spawn(Api_Script, "Api_Script")   -- ให้ API ขึ้นก่อน
 task.wait(0.1)
 safe_spawn(AuraQueue, "AuraQueue")   -- ให้ API ขึ้นก่อน
 task.wait(0.1)
-safe_spawn(Farm_Script, "Farm_Script") -- Banana
-task.wait(0.1) -- Banana
+--safe_spawn(Farm_Script, "Farm_Script") -- Banana
+--task.wait(0.1) -- Banana
 --safe_spawn(FarmMaru_Script, "FarmMaru_Script") -- Maru
 --task.wait(0.1) -- Maru
 --safe_spawn(Autochat_Script, "Autochat_Script")
@@ -752,5 +752,5 @@ task.wait(0.1) -- Banana
 --safe_spawn(Private_Server_Bloxfruit, "Private_Server_Bloxfruit")
 --task.wait(0.1)
 --safe_spawn(Check_level_horst, "Check_level_horst")
---task.wait(0.1)
---safe_spawn(QuartyZ_Script, "QuartyZ_Script") -- QuartyZ
+task.wait(0.1)
+safe_spawn(QuartyZ_Script, "QuartyZ_Script") -- QuartyZ
