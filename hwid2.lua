@@ -62,7 +62,7 @@ print("This PC is:", _G.PC or "Not Set")
             ["Fragment"] = 50000,
         },
         ["Auto Chat"] = {
-            ["Enabled"] = true,
+            ["Enabled"] = false,
             ["Text"] = "ไก่ตัน สุดคุ้ม pangpream . rdcw . xyz",
         },
         ["Auto Summon Rip Indra"] = true, --- auto buy haki and craft haki legendary 
