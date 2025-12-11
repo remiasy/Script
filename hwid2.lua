@@ -48,7 +48,7 @@ print("This PC is:", _G.PC or "Not Set")
             ["Mirror Fractal"] = true,
             ["Cursed Dual Katana"] = true,
             ["Upgrade Race V2-V3"] = false,
-            ["Auto Pull Lever"] = true,
+            ["Auto Pull Lever"] = false,
             ["Shark Anchor"] = false, --- if have cdk,sg,godhuman
         },
         ["Get Rare Items"] = {
