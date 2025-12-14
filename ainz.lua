@@ -1,3 +1,4 @@
+-- ithinkthisisfixed
 if game.PlaceId == 18219125606 then
     local TeleportService = game:GetService("TeleportService")
     local Players = game:GetService("Players")
@@ -1032,7 +1033,7 @@ local function executeLobbySequence()
             {func = GameFunctions.redeemAllCodes, name = "Code Redemption"},
             {func = GameFunctions.completeDialogue, name = "Dialogue Completion"},
             {func = GameFunctions.claimBattlepass, name = "Battlepass Claim"},
-            {func = GameFunctions.LobbyFuser(), name = "Fusing"},
+            {func = GameFunctions.LobbyFuser, name = "Fusing"},
             {func = function()
                 -- Loop summon until Leaves runs low
                 while getattr("Leaves", 0) >= CONFIG.THRESHOLDS.LOBBY_SUMMON do
