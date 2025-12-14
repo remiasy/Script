@@ -495,58 +495,117 @@ end
 
 
 
-function GameFunctions.ForAkasa()
-    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+function GameFunctions.LobbyFuser()
     local Players = game:GetService("Players")
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
     local player = Players.LocalPlayer
-
-    local function fireSettings(rarity)
-        ReplicatedStorage.Networking.Settings.SettingsEvent:FireServer("Toggle", rarity)
-    end
-
-    local function fireAutoFuse(rarity)
-        ReplicatedStorage.Networking.AutoFuseEvent:FireServer("UpdateRarity", rarity)
-    end
-    
-    fireSettings("Rare")
-    task.wait(1)
-    fireSettings("Epic")
-    task.wait(1)
-
     local FuseEvent = ReplicatedStorage.Networking.Units.FuseEvent
+    local SummonEvent = ReplicatedStorage.Networking.Units.SummonEvent
 
     local unitsFolder = player.PlayerGui.Windows.GlobalInventory.Holder.LeftContainer
         .FakeScrollingFrame.Items.CacheContainer
 
-    for _, guiItem in ipairs(unitsFolder:GetChildren()) do
-        local uuid = guiItem.Name
-        local nameObj = guiItem:FindFirstChild("Container")
-            and guiItem.Container.Holder
-            and guiItem.Container.Holder.Main
-            and guiItem.Container.Holder.Main.UnitName
+    -- ===============================
+    -- CONFIG
+    -- ===============================
+    local MAIN_UNIT_NAME = "Ackers"
+    local STOP_LEVEL = 60
+    local SUMMON_BANNER = "Special" -- เปลี่ยนได้
 
-        if uuid and nameObj and nameObj.Text == "Ackers" then
-            print("✔ Fuse:", uuid)
-            FuseEvent:FireServer(uuid)
-            task.wait(0.15)
+    local bannedUnits = {
+    ["Luffo"] = true,
+    ["Lich King (Ruler)"] = true,
+    ["Horsegirls (Racers)"] = true,
+    ["Unstable (Psychosis)"] = true,
+    ["Black Hole (Ninjutsu)"] = true,
+    ["Ghost Girl (Umbrella)"] = true,
+    ["Ghoul (Winged)"] = true,
+    ["Jailer (Underworld)"] = true,
+    ["Horsegirls"] = true,
+    ["Unstable"] = true,
+    ["Black Hole"] = true,
+    ["Ghost Girl"] = true,
+    ["Ghoul"] = true,
+    ["Jailer"] = true,
+}
+
+    -- ===============================
+    -- FIND ACKERS + CHECK LEVEL
+    -- ===============================
+    local mainUUID, ackersLevel = nil, 0
+
+    for _, guiItem in ipairs(unitsFolder:GetChildren()) do
+        local main = guiItem:FindFirstChild("Container")
+            and guiItem.Container:FindFirstChild("Holder")
+            and guiItem.Container.Holder:FindFirstChild("Main")
+
+        local nameObj = main and main:FindFirstChild("UnitName")
+        local levelObj = main and main:FindFirstChild("LevelFrame")
+            and main.LevelFrame:FindFirstChild("Level")
+
+        if nameObj and nameObj.Text == MAIN_UNIT_NAME then
+            mainUUID = guiItem.Name
+            ackersLevel = tonumber(levelObj and levelObj.Text) or 0
+            break
         end
     end
 
-    task.wait(1)
-    fireAutoFuse("Epic")
-    task.wait(1)
-    fireAutoFuse("Rare")
-    task.wait(1)
+    if not mainUUID then
+        warn("❌ ไม่พบ Ackers")
+        return
+    end
 
+    print("✔ Ackers Level:", ackersLevel)
 
-    for i = 1, 5 do
-        ReplicatedStorage.Networking.Units.SummonEvent:FireServer("SummonTen", "Special")
+    -- ===============================
+    -- STOP CONDITION
+    -- ===============================
+    if ackersLevel >= STOP_LEVEL then
+        warn("🛑 Ackers Lv.60 → หยุด Fuse + หยุดสุ่ม Banner")
+        return
+    end
+
+    -- ===============================
+    -- COLLECT FUSE MATERIALS
+    -- ===============================
+    local fuseList = {}
+
+    for _, guiItem in ipairs(unitsFolder:GetChildren()) do
+        if guiItem.Name ~= mainUUID then
+            local nameObj = guiItem:FindFirstChild("Container")
+                and guiItem.Container.Holder.Main.UnitName
+
+            if nameObj then
+                local unitName = nameObj.Text:match("^%s*(.-)%s*$")
+                if not bannedUnits[unitName] then
+                    table.insert(fuseList, guiItem.Name)
+                end
+            end
+        end
+    end
+
+    -- ===============================
+    -- FIRE FUSE
+    -- ===============================
+    if #fuseList > 0 then
+        FuseEvent:FireServer("Fuse", {
+            mainUUID,
+            fuseList
+        })
+        print("🔥 Fuse:", #fuseList)
         task.wait(0.5)
+    end
 
+    -- ===============================
+    -- SUMMON BANNER
+    -- ===============================
+    -- ตรวจซ้ำอีกครั้งกัน edge case
+    if ackersLevel < STOP_LEVEL then
+        SummonEvent:FireServer("SummonTen", SUMMON_BANNER)
+        print("🎰 Summon Banner:", SUMMON_BANNER)
     end
 end
-
-
 
 
 
@@ -957,9 +1016,9 @@ local function executeLobbySequence()
     Utils.log("MAIN", "=== Starting Lobby Sequence ===")
      GameFunctions.summonUntilLow()
     task.wait(1)
-    GameFunctions.ForAkasa()
-    task.wait(1)
     GameFunctions.equipAllUnits()
+    task.wait(1)
+    GameFunctions.LobbyFuser()
     
     local playerLevel = getattr("Level", 1)
     local currentLeaves = getattr("Leaves", 0)
@@ -1282,7 +1341,7 @@ local function mainFarmLoop()
     CONFIG.THRESHOLDS.SPECIAL_PLACE = 5000000  -- ฟาร์มถึง 5M
     Utils.log("ESCANOR", "Escanor owned → Farming until 5,000,000 Leaves")
 else
-    CONFIG.THRESHOLDS.SPECIAL_PLACE = 5000000   -- ฟาร์มถึง 100k ปกติ
+    CONFIG.THRESHOLDS.SPECIAL_PLACE = 300000   -- ฟาร์มถึง 100k ปกติ
     Utils.log("ESCANOR", "Escanor not owned → Farming until 100,000 Leaves")
 end
     
