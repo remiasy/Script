@@ -1282,7 +1282,7 @@ local function mainFarmLoop()
     CONFIG.THRESHOLDS.SPECIAL_PLACE = 5000000  -- ฟาร์มถึง 5M
     Utils.log("ESCANOR", "Escanor owned → Farming until 5,000,000 Leaves")
 else
-    CONFIG.THRESHOLDS.SPECIAL_PLACE = 100000   -- ฟาร์มถึง 100k ปกติ
+    CONFIG.THRESHOLDS.SPECIAL_PLACE = 5000000   -- ฟาร์มถึง 100k ปกติ
     Utils.log("ESCANOR", "Escanor not owned → Farming until 100,000 Leaves")
 end
     
