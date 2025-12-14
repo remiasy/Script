@@ -1,4 +1,3 @@
--- fuser added version
 if game.PlaceId == 18219125606 then
     local TeleportService = game:GetService("TeleportService")
     local Players = game:GetService("Players")
@@ -345,8 +344,8 @@ local defaultConfig = {
     },
     
     THRESHOLDS = getgenv().THRESHOLDS or {
-        LOBBY_SUMMON = 3000000,
-        SPECIAL_PLACE = 3000000
+        LOBBY_SUMMON = 1500,
+        SPECIAL_PLACE = 100000
     }
 }
 
@@ -601,7 +600,7 @@ function GameFunctions.LobbyFuser()
     -- ===============================
     -- SUMMON BANNER
     -- ===============================
-    -- ตรวจซ้ำอีกครั้งกัน edge case
+    
     if ackersLevel < STOP_LEVEL then
         SummonEvent:FireServer("SummonTen", SUMMON_BANNER)
         print("🎰 Summon Banner:", SUMMON_BANNER)
@@ -1018,8 +1017,8 @@ local function executeLobbySequence()
      GameFunctions.summonUntilLow()
     task.wait(1)
     GameFunctions.equipAllUnits()
-    task.wait(1)
-    GameFunctions.LobbyFuser()
+    
+    
     
     local playerLevel = getattr("Level", 1)
     local currentLeaves = getattr("Leaves", 0)
@@ -1033,6 +1032,7 @@ local function executeLobbySequence()
             {func = GameFunctions.redeemAllCodes, name = "Code Redemption"},
             {func = GameFunctions.completeDialogue, name = "Dialogue Completion"},
             {func = GameFunctions.claimBattlepass, name = "Battlepass Claim"},
+            {func = GameFunctions.LobbyFuser(), name = "Fusing"},
             {func = function()
                 -- Loop summon until Leaves runs low
                 while getattr("Leaves", 0) >= CONFIG.THRESHOLDS.LOBBY_SUMMON do
@@ -1342,7 +1342,7 @@ local function mainFarmLoop()
     CONFIG.THRESHOLDS.SPECIAL_PLACE = 5000000  -- ฟาร์มถึง 5M
     Utils.log("ESCANOR", "Escanor owned → Farming until 5,000,000 Leaves")
 else
-    CONFIG.THRESHOLDS.SPECIAL_PLACE = 3000000   -- ฟาร์มถึง 100k ปกติ
+    CONFIG.THRESHOLDS.SPECIAL_PLACE = 100000   -- ฟาร์มถึง 100k ปกติ
     Utils.log("ESCANOR", "Escanor not owned → Farming until 100,000 Leaves")
 end
     
