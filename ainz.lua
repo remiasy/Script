@@ -1,4 +1,4 @@
--- ithinkthisisfixed
+-- 14/12/2024
 if game.PlaceId == 18219125606 then
     local TeleportService = game:GetService("TeleportService")
     local Players = game:GetService("Players")
