@@ -720,6 +720,16 @@ task.spawn(function()
         end
     end)
 end)
+
+end
+
+repeat task.wait() until game:IsLoaded()
+
+local function safe_spawn(fn, name)
+    task.spawn(function()
+        local ok, err = pcall(fn)
+        if not ok then warn((name or "task").." error: "..tostring(err)) end
+    end)
 end
 
 -- ===== ฟังก์ชันตามเดิมของคุณ (ไม่ต้องแก้) =====
