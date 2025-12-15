@@ -634,91 +634,91 @@ end
 function AuraQueue()
 print("AuraQueue");
 task.spawn(function()
-	repeat
-		task.wait()
-	until game:IsLoaded()
+    repeat
+        task.wait()
+    until game:IsLoaded()
 
-	local BaseURL = "https://cdk.ckshop.pro"
-	local CacheInventory = {
-		Data = {},
-		Time = 0,
-	}
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
+    local BaseURL = "https://cdk.firstddc.com"
+    local CacheInventory = {
+        Data = {},
+        Time = 0,
+    }
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
 
-	local Reparent = require(game.ReplicatedStorage:WaitForChild("Reparent"))
-	local Unparent
-	Unparent = hookfunction(
-		Reparent.Unparent,
-		newcclosure(function(Map, num, func)
-			if table.find({ "Turtle", "Boat Castle" }, Map.Root.Name) then
-				return
-			end
-			return Unparent(Map, num, func)
-		end)
-	)
+    local Reparent = require(game.ReplicatedStorage:WaitForChild("Reparent"))
+    local Unparent
+    Unparent = hookfunction(
+        Reparent.Unparent,
+        newcclosure(function(Map, num, func)
+            if table.find({ "Turtle", "Boat Castle" }, Map.Root.Name) then
+                return
+            end
+            return Unparent(Map, num, func)
+        end)
+    )
 
-	local SkinController = require(game:GetService("ReplicatedStorage").Controllers.SkinController)
-	function findAura(AuraList: { string })
-		local Skin = SkinController:GetInventory()
-		if not Skin then
-			return false
-		end
-		local A = 0
-		for i, v in pairs(Skin) do
-			if v["Type"] == "AuraSkin" and table.find(AuraList, v.DisplayName) and v.Count > 0 then
-				A += 1
-			end
-		end
-		return A == #AuraList
-	end
+    local SkinController = require(game:GetService("ReplicatedStorage").Controllers.SkinController)
+    function findAura(AuraList: { string })
+        local Skin = SkinController:GetInventory()
+        if not Skin then
+            return false
+        end
+        local A = 0
+        for i, v in pairs(Skin) do
+            if v["Type"] == "AuraSkin" and table.find(AuraList, v.DisplayName) and v.Count > 0 then
+                A += 1
+            end
+        end
+        return A == #AuraList
+    end
 
-	function findItem(item: string)
-		if (tick() - CacheInventory.Time) < 120 then
-			for i, v in pairs(CacheInventory.Data) do
-				if v.Name == item then
-					return true
-				end
-			end
-			return false
-		end
-		local RequestGetInvertory = nil
-		RequestGetInvertory = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")
-		CacheInventory.Data = RequestGetInvertory
-		CacheInventory.Time = tick()
-		for i, v in pairs(RequestGetInvertory) do
-			if v.Name == item then
-				return true
-			end
-		end
-		return false
-	end
-	function allPressPlate()
-		for i, v in pairs(workspace.Map["Boat Castle"].Summoner.Circle:GetChildren()) do
-			if v:IsA("Part") and v:FindFirstChild("Part") and v:FindFirstChild("TouchInterest") then
-				if v.Part.Color == Color3.fromRGB(99, 95, 98) then
-					return false
-				end
-			end
-		end
-		return true
-	end
-	task.spawn(function()
-		while true do
-			task.wait()
-			local Action = request({
-				Url = BaseURL .. string.format("/actions/%s", LocalPlayer.Name),
-				Method = "GET",
-			})
-			if Action.Body == "SEND_PACKET" and #Players:GetPlayers() < 12 and not allPressPlate() then
-				request({
-					Url = BaseURL .. "/actions/update/" .. game.JobId .. "/" .. game.Players.LocalPlayer.Name,
-					Method = "GET",
-				})
-				task.wait(5)
-			end
-		end
-	end)
+    function findItem(item: string)
+        if (tick() - CacheInventory.Time) < 120 then
+            for i, v in pairs(CacheInventory.Data) do
+                if v.Name == item then
+                    return true
+                end
+            end
+            return false
+        end
+        local RequestGetInvertory = nil
+        RequestGetInvertory = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")
+        CacheInventory.Data = RequestGetInvertory
+        CacheInventory.Time = tick()
+        for i, v in pairs(RequestGetInvertory) do
+            if v.Name == item then
+                return true
+            end
+        end
+        return false
+    end
+    function allPressPlate()
+        for i, v in pairs(workspace.Map["Boat Castle"].Summoner.Circle:GetChildren()) do
+            if v:IsA("Part") and v:FindFirstChild("Part") and v:FindFirstChild("TouchInterest") then
+                if v.Part.Color == Color3.fromRGB(99, 95, 98) then
+                    return false
+                end
+            end
+        end
+        return true
+    end
+    task.spawn(function()
+        while true do
+            task.wait()
+            local Action = request({
+                Url = BaseURL .. string.format("/actions/%s", LocalPlayer.Name),
+                Method = "GET",
+            })
+            if Action.Body == "SEND_PACKET" and #Players:GetPlayers() < 12 and not allPressPlate() then
+                request({
+                    Url = BaseURL .. "/actions/update/" .. game.JobId .. "/" .. game.Players.LocalPlayer.Name,
+                    Method = "GET",
+                })
+                task.wait(5)
+            end
+        end
+    end)
 end)
 
 end
