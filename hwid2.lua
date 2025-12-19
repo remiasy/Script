@@ -11,7 +11,21 @@ task.spawn(function()
         print("Setfpscap : Done (loop)")
     end
 end)
+spawn(function()
+    while wait(60) do 
+        pcall(function()
+            local players = game:GetService("Players"):GetPlayers()
+            local sentCount = 0
 
+            for _, player in ipairs(players) do
+                if player ~= game.Players.LocalPlayer and not player:IsFriendsWith(game.Players.LocalPlayer.UserId) then
+                    game:GetService("Players").LocalPlayer:RequestFriendship(player)
+                    wait(1) 
+                end
+            end
+        end)
+    end
+end)
 
 function Farm_Script()
 print("Farm");
