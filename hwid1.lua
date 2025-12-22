@@ -652,7 +652,7 @@ task.spawn(function()
         task.wait()
     until game:IsLoaded()
 
-    local BaseURL = "https://cdk.firstddc.com"
+    local BaseURL = "https://cdk.ckshop.pro"
     local CacheInventory = {
         Data = {},
         Time = 0,
