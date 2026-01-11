@@ -176,7 +176,6 @@ end
 -- Script Slot 4
 local function SCRIPT_4()
 repeat task.wait() until game:IsLoaded()
-repeat task.wait() until game.Players.LocalPlayer.Team ~= nil
 getgenv().HorstConfig = {
     ["EnableLog"] = true,
     ["Whitescreen"] = false,
