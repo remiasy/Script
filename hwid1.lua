@@ -1,4 +1,11 @@
 repeat task.wait() until game:IsLoaded()
+task.spawn(function()
+    local FPS = 10
+    while true do
+        pcall(setfpscap, FPS)
+        task.wait(10)
+    end
+end)
 
 -- ================= SAFE SPAWN =================
 local function safe_spawn(fn, name)
