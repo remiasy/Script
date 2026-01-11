@@ -736,6 +736,8 @@ end
 -- ============================================
 
 -- ทางเลือก A: สตาร์ตแบบขนาน
+safe_spawn(QuartyZ_Script, "QuartyZ_Script") -- QuartyZ
+task.wait(6)
 safe_spawn(Log_script, "Log_script")
 task.wait(0.1)
 safe_spawn(Api_Script, "Api_Script")   -- ให้ API ขึ้นก่อน
@@ -751,5 +753,3 @@ task.wait(0.1)
 --safe_spawn(Private_Server_Bloxfruit, "Private_Server_Bloxfruit")
 --task.wait(0.1)
 --safe_spawn(Check_level_horst, "Check_level_horst")
-task.wait(0.1)
-safe_spawn(QuartyZ_Script, "QuartyZ_Script") -- QuartyZ
