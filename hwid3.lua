@@ -1,4 +1,4 @@
-repeat task.wait() until game:IsLoaded()
+repeat task.wait(5) until game:IsLoaded()
 task.spawn(function()
     local FPS = 10
     while task.wait(60) do
@@ -23,6 +23,7 @@ end
 
 -- Script Slot 1
 local function SCRIPT_1()
+repeat task.wait() until game:IsLoaded()
 getgenv().Mode = "OneClick"
 getgenv().Setting = {
     ["Team"] = "Pirates", -- Options "Pirates", "Marines"
