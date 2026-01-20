@@ -1,4 +1,4 @@
-repeat task.wait(10) until game:IsLoaded()
+repeat task.wait() until game:IsLoaded()
 task.spawn(function()
     local FPS = 10
     while task.wait(60) do
