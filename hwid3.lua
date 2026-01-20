@@ -31,10 +31,10 @@ getgenv().Setting = {
     ["Fruits"] = {  -- setting for fruits u want
         ["Primary"] = { -- if current fruit is not in this list, eat/buy
             "Dough-Dough",
-			"T-Rex-T-Rex",
-			"Mammoth-Mammoth",
-			"Venom-Venom",
-			"Spirit-Spirit",
+            "T-Rex-T-Rex",
+            "Mammoth-Mammoth",
+            "Venom-Venom",
+            "Spirit-Spirit",
             -- u can configs add mores/remove and must end with , (comma symbol)
         },
         ["Normal"] = { -- it just a normal fruit list
@@ -45,9 +45,6 @@ getgenv().Setting = {
         -- run this for get all fruit name `local t={};for _,v in pairs(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("GetFruits"))do table.insert(t,v.Name)end;setclipboard(table.concat(t, "\n"))`
     },
     ["Lock Fruits"] = { -- don't use or eat fruits in this list
-		"Dragon-Dragon",
-		"Lightning-Lightning",
-		"Control-Control",
         "Yeti-Yeti",
         "T-Rex-T-Rex",
         "Kitsune-Kitsune",
@@ -96,7 +93,7 @@ task.spawn(function()
         task.wait()
     until game:IsLoaded()
 
-    local BaseURL = "https://cdk.firstddc.com"
+    local BaseURL = "https://cdk.ckshop.pro"
     local CacheInventory = {
         Data = {},
         Time = 0,
