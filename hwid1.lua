@@ -1,4 +1,4 @@
-repeat task.wait() until game:IsLoaded()
+repeat task.wait(5) until game:IsLoaded()
 task.spawn(function()
     local FPS = 10
     while task.wait(60) do
@@ -23,13 +23,14 @@ end
 
 -- Script Slot 1
 local function SCRIPT_1()
+repeat task.wait() until game:IsLoaded()
 getgenv().Mode = "OneClick"
 getgenv().Setting = {
     ["Team"] = "Pirates", -- Options "Pirates", "Marines"
     ["FucusOnLevel"] = true,
     ["Fruits"] = {  -- setting for fruits u want
         ["Primary"] = { -- if current fruit is not in this list, eat/buy
-            "Dough-Dough",
+            "Dragon-Dragon",
             -- u can configs add mores/remove and must end with , (comma symbol)
         },
         ["Normal"] = { -- it just a normal fruit list
@@ -88,7 +89,7 @@ task.spawn(function()
         task.wait()
     until game:IsLoaded()
 
-    local BaseURL = "https://cdk.firstddc.com"
+    local BaseURL = "https://cdk.ckshop.pro"
     local CacheInventory = {
         Data = {},
         Time = 0,
