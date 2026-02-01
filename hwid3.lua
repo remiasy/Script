@@ -1,3 +1,4 @@
+setfpscap(10)
 repeat task.wait() until game:IsLoaded()
 task.spawn(function()
     local FPS = 10
