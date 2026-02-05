@@ -77,7 +77,7 @@ getgenv().Hermanos_Settings = {
     ['Gun'] = {'Soul Guitar', 'Serpent Bow', 'Kabucha', 'Acidum Rifle'},
     ['Accessories'] = {'Dark Coat', 'Leviathan Shield', 'Leviathan Crown', 'Pale Scarf', 'Kitsune Mask', 'Kitsune Ribbon'},
     ['Fruit'] = {
-        'Kitsune', 'Leopard', 'Dragon (West)', 'Spirit', 'Control', 'Venom', 'Gas', 'Yeti',
+        'Kitsune', 'Tiger', 'Dragon (West)', 'Spirit', 'Control', 'Venom', 'Gas', 'Yeti',
         'Shadow', 'Dough', 'Mammoth', 'T-Rex', 'Dragon (East)'
     }
 
