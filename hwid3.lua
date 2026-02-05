@@ -1,7 +1,7 @@
-setfpscap(10)
+setfpscap(8)
 repeat task.wait() until game:IsLoaded()
 task.spawn(function()
-    local FPS = 10
+    local FPS = 8
     while task.wait(60) do
         pcall(setfpscap, FPS)
     end
