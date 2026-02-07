@@ -191,11 +191,11 @@ getgenv().HorstConfig = {
         ["LockFpsAmount"] = 30 
     },
     ["AutoFunctions"] = {
-        ["Enable"] = false,
+        ["Enable"] = true,
         ["BF"] = { 
             ["MAIN"] = {
-                ["Level"] = 2800,
-                ["Fragments"] = 10000,
+                ["Level"] = 1800,
+                ["Fragments"] = 0,
                 ["Full_Mastery_DF"] = false,
                 ["Full_Awake_DF"] = false,
                 ["Lever"] = false,
@@ -216,7 +216,7 @@ getgenv().HorstConfig = {
                     }
                 }
             },
-            ["PASS"] = false,
+            ["PASS"] = true,
             ["GOD"] = false,
             ["GOD_CDK"] = false,
             ["GOD_SA"] = false, 
