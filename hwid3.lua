@@ -191,7 +191,7 @@ getgenv().HorstConfig = {
         ["LockFpsAmount"] = 30 
     },
     ["AutoFunctions"] = {
-        ["Enable"] = true,
+        ["Enable"] = false,
         ["BF"] = { 
             ["MAIN"] = {
                 ["Level"] = 1800,
