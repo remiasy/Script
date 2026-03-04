@@ -1,4 +1,4 @@
-setfpscap(6)
+setfpscap(10)
 repeat task.wait() until game:IsLoaded()
 task.spawn(function()
     local FPS = 8
@@ -237,8 +237,8 @@ end
 safe_spawn(SCRIPT_1, "SCRIPT_1")
 task.wait(0.1)
 
-safe_spawn(SCRIPT_2, "SCRIPT_2")
-task.wait(0.1)
+--safe_spawn(SCRIPT_2, "SCRIPT_2")
+--task.wait(0.1)
 
 safe_spawn(SCRIPT_3, "SCRIPT_3")
 task.wait(0.1)
